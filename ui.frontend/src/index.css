@@ -15,6 +15,14 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito&display=swap%27');
+
 
 html,
 body {
@@ -38,6 +46,6 @@ h5,
 p,
 .nav-container,
 .rw-box {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #000000;
 }
