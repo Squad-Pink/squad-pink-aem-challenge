@@ -15,4 +15,10 @@ export const LabelStyled = styled.label`
     &.birthday {
         font-size: ${toRem(18)};
     }
+
+    &.checkbox{
+        font-size: ${toRem(16)};
+        line-height: ${toRem(18)};
+        color: #111111;
+    }
 `;
