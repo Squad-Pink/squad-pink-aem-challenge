@@ -20,6 +20,7 @@ import "./Container/Container";
 import "./ExperienceFragment/ExperienceFragment";
 import "./XxXxx";
 import MeuComponente from "./MeuComponente";
+import "./Micro/Line/Line";
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 
@@ -62,12 +63,12 @@ const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
 const TitleV2 = withAsyncImport(() =>
   import(
     `@adobe/aem-core-components-react-base/dist/authoring/title/v2/TitleV2`
-  ),
+  )
 );
 const CarouselV1 = withAsyncImport(() =>
   import(
     `@adobe/aem-core-components-react-spa/dist/container/carousel/v1/CarouselV1`
-  ),
+  )
 );
 
 MapTo("reactapp/components/download")(DownloadV1, {
