@@ -1,20 +1,32 @@
 import React from 'react'
 import { ButtonStyled } from './Button.styled';
 
-const Button = ({textButton, colorButton, firstIcon, secondIcon,icons }) => {
-  switch (firstIcon) {
-    case "plus":
-      firstIcon = <i className="fa-solid fa-plus"></i>
+const Button = ({textButton, colorButton, type, firstIcon, secondIcon }) => {
+  switch (type) {
+    case "next":
+      firstIcon = "";
+      secondIcon = <i className="fa-solid fa-angle-right"></i>;
     break;
-    case "check":
-      firstIcon = <i className="fa-solid fa-check"></i>
+    case "more":
+      firstIcon = <i className="fa-solid fa-plus"></i>;
+      secondIcon = <i className="fa-solid fa-angle-right"></i>;
     break;  
+    case "certificates":
+      firstIcon = "";
+      secondIcon = <i className="fa-solid fa-angle-down"></i>;
+    break;  
+    case "finish":
+      firstIcon = <i className="fa-solid fa-check"></i>;
+      secondIcon = "";
+    break;  
+    
     default:
       firstIcon="";
+      secondIcon = "";
   };
 
   return (
-    <ButtonStyled className={icons} colorButton={colorButton}> {firstIcon} {textButton} {secondIcon ? <i className="fa-solid fa-angle-right"></i> : ""} </ButtonStyled>
+    <ButtonStyled className={type} colorButton={colorButton}> {firstIcon} {textButton} {secondIcon} </ButtonStyled>
   );
 }
 

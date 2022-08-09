@@ -17,7 +17,11 @@ export const ButtonStyled = styled.button`
     align-items: center;
     justify-content: space-evenly;
 
-    &.two {
+    &.more {
         width: ${toRem(109)};  
+    }
+
+    &.certificates {
+        width: ${toRem(129)};  
     }
 `;
