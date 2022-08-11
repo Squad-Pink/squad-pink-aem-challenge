@@ -16,11 +16,9 @@ export const ButtonStyled = styled.button`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
     &.more {
         width: ${toRem(109)};  
     }
-
     &.certificates {
         width: ${toRem(129)};  
     }
