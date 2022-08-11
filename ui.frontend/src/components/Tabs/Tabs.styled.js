@@ -8,9 +8,15 @@ export const TabsContainer = styled.div`
   font-family: "Nunito", sans-serif;
 `;
 
+export const TitleContainer = styled.div`
+margin-top:${toRem(40)};
+margin-bottom: ${toRem(33)};
+margin-left: ${toRem(67)};
+`;
+
 export const NavTabs = styled.ul`
   width: 90%;
-  margin: 0 auto ${toRem(32)};
+  margin: 0 ${toRem(67)} ${toRem(32)};
   display: flex;
   border-bottom: ${toRem(1)} solid #aaaaaa; 
 `;
