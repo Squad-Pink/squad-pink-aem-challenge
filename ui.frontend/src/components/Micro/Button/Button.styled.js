@@ -16,7 +16,7 @@ export const ButtonStyled = styled.button`
   line-height: ${toRem(18)};
   color: #ffffff;
   display: flex;
-  align-items: center; 
+  align-items: center;
   z-index: 50;
   cursor: pointer;
 `;
