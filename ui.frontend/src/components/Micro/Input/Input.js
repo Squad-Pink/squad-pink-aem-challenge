@@ -10,7 +10,7 @@ const InputStyled = ({
   checkboxColor,
   label,
   borderColor,
-  placeholderColor,
+  register
 }) => {
   const getInput = (type) => {
     switch (type) {
@@ -20,13 +20,13 @@ const InputStyled = ({
       case "url":
         return (
           <Input
-            placeholderColor={placeholderColor}
             borderColor={borderColor}
             id={id}
             placeholder={placeholder}
             type={type}
             value={value}
             onChange={onChange}
+            {...register(type)}
           />
         );
       case "checkbox":

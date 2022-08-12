@@ -19,6 +19,5 @@ export const LabelStyled = styled.label`
     &.checkbox{
         font-size: ${toRem(16)};
         line-height: ${toRem(18)};
-        color: #111111;
     }
 `;
