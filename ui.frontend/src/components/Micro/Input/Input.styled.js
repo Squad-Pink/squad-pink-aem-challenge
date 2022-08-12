@@ -30,7 +30,7 @@ const Input = styled.input`
   &::placeholder {
     height: 1.25rem;
     font-family: "Nunito", sans-serif;
-    color: ${(props) => props.placeholderColor};
+    color: #767676;
     justify-content: center;
   }
 `;
