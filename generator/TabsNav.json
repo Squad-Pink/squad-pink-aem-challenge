@@ -1,0 +1,110 @@
+{
+  "project-settings": {
+    "code-owner": "React App",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "reactapp",
+    "model-interface-pkg": "com.reactapp.core.models",
+    "model-impl-pkg": "com.reactapp.core.models.impl"
+  },
+  "name": "tabs-nav",
+  "title": "Tabs Nav",
+  "group": "React App - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": [
+      "request"
+    ],
+    "generic-javadoc": false,
+    "properties": [
+      {
+        "field": "url1",
+        "type": "pathfield",
+        "label": "Url do primeiro item da tab de navegação:",
+        "json-expose": true,
+        "json-property": "url1"
+      },
+      {
+        "field": "url2",
+        "type": "pathfield",
+        "label": "Url do segundo item da tab de navegação:",
+        "json-expose": true,
+        "json-property": "url2"
+      },
+      {
+        "field": "url3",
+        "type": "pathfield",
+        "label": "Url do terceiro item da tab de navegação:",
+        "json-expose": true,
+        "json-property": "url3"
+      },
+      {
+        "field": "pageTitle",
+        "label": "Digite o titulo da página:",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "pageTitle"
+      },
+      {
+        "field": "pageTitleColor",
+        "label": "Escolha a cor do título da página",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "pageTitleColor"
+      },
+      {
+        "field": "titleTab1",
+        "label": "Digite o titulo do primeiro item da tab de navegação:",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "titleTab1"
+      },
+      {
+        "field": "titleTab2",
+        "label": "Digite o titulo do primeiro item da tab de navegação:",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "titleTab2"
+      },
+      {
+        "field": "titleTab3",
+        "label": "Digite o titulo do primeiro item da tab de navegação:",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "titleTab3"
+      },
+      {
+        "field": "tabTitleColor",
+        "label": "Escolha cor dos títulos da tab de navegação:",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "tabTitleColor"
+      },
+      {
+        "field": "titleBorderColor",
+        "label": "Escolha a cor da borda inferior dos títulos da tab de navegação:",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "titleBorderColor"
+      },
+      {
+        "field": "tabTitleActiveColorr",
+        "label": "Escolha a cor dos títulos da tab de navegação quando estão ativos:",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "tabTitleActiveColor"
+      }
+    ]
+  }
+}
