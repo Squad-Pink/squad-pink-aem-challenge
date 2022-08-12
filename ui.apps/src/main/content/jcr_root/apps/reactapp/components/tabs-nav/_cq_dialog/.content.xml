@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  ***********************************************************************
+ |  React App CONFIDENTIAL
+ |  ___________________
+ |
+ |  Copyright 2022 React App
+ |  All Rights Reserved.
+ |
+ |  NOTICE:  All information contained herein is, and remains the property
+ |  of React App and its suppliers, if any. The intellectual and
+ |  technical concepts contained herein are proprietary to React App
+ |  and its suppliers and are protected by trade secret or copyright law.
+ |  Dissemination of this information or reproduction of this material
+ |  is strictly forbidden unless prior written permission is obtained
+ |  from React App.
+ |  ***********************************************************************
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Tabs Nav"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+   <content jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+      <layout jcr:primaryType="nt:unstructured"
+              margin="{Boolean}false"
+              sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+      <items jcr:primaryType="nt:unstructured">
+         <column jcr:primaryType="nt:unstructured"
+                 sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+               <url1 cq-msm-lockable="./url1"
+                     fieldLabel="Url do primeiro item da tab de navegação:"
+                     jcr:primaryType="nt:unstructured"
+                     name="./url1"
+                     sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"/>
+               <url2 cq-msm-lockable="./url2"
+                     fieldLabel="Url do segundo item da tab de navegação:"
+                     jcr:primaryType="nt:unstructured"
+                     name="./url2"
+                     sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"/>
+               <url3 cq-msm-lockable="./url3"
+                     fieldLabel="Url do terceiro item da tab de navegação:"
+                     jcr:primaryType="nt:unstructured"
+                     name="./url3"
+                     sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"/>
+               <pageTitle cq-msm-lockable="./pageTitle"
+                          fieldLabel="Digite o titulo da página:"
+                          jcr:primaryType="nt:unstructured"
+                          name="./pageTitle"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+               <pageTitleColor cq-msm-lockable="./pageTitleColor"
+                               fieldLabel="Escolha a cor do título da página"
+                               jcr:primaryType="nt:unstructured"
+                               name="./pageTitleColor"
+                               sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+               <titleTab1 cq-msm-lockable="./titleTab1"
+                          fieldLabel="Digite o titulo do primeiro item da tab de navegação:"
+                          jcr:primaryType="nt:unstructured"
+                          name="./titleTab1"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+               <titleTab2 cq-msm-lockable="./titleTab2"
+                          fieldLabel="Digite o titulo do segundo item da tab de navegação:"
+                          jcr:primaryType="nt:unstructured"
+                          name="./titleTab2"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+               <titleTab3 cq-msm-lockable="./titleTab3"
+                          fieldLabel="Digite o titulo do terceiro item da tab de navegação:"
+                          jcr:primaryType="nt:unstructured"
+                          name="./titleTab3"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+               <tabTitleColor cq-msm-lockable="./tabTitleColor"
+                              fieldLabel="Escolha cor dos títulos da tab de navegação:"
+                              jcr:primaryType="nt:unstructured"
+                              name="./tabTitleColor"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+               <titleBorderColor cq-msm-lockable="./titleBorderColor"
+                                 fieldLabel="Escolha a cor da borda inferior dos títulos da tab de navegação:"
+                                 jcr:primaryType="nt:unstructured"
+                                 name="./titleBorderColor"
+                                 sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+               <tabTitleActiveColorr cq-msm-lockable="./tabTitleActiveColorr"
+                                     fieldLabel="Escolha a cor dos títulos da tab de navegação quando estão ativos:"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./tabTitleActiveColorr"
+                                     sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+            </items>
+         </column>
+      </items>
+   </content>
+</jcr:root>
