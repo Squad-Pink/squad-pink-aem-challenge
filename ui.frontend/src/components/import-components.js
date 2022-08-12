@@ -20,7 +20,6 @@ import "./Container/Container";
 import "./ExperienceFragment/ExperienceFragment";
 import "./XxXxx";
 import MeuComponente from "./MeuComponente";
-import "./SplitButton/SplitButton";
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { MapTo } from "@adobe/aem-react-editable-components";
 import Button from "../Micro/Button/Button";
 import {
   CertificatesStyled,
@@ -48,4 +47,4 @@ SplitButton.defaultProps = {
   secondIcon: "Escolha o segundo ícone",
 };
 
-export default MapTo("reactapp/components/split-button")(SplitButton);
+export default SplitButton;
