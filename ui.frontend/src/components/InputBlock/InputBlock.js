@@ -14,38 +14,33 @@ export const InputBlock = ({ register, errors, label, labelColor, errorText, col
       type="url";
       break;
     case "tel":
-      type="number";
+      type="tel";
       break;
     case "email":
       type="email";
       break;
     case "checkbox":
       type="checkbox";
-      id="checkbox";
-      break;
-    case "select":
-      type= "select" ;
       break;
     default :
       type="aaa"
   }
   
-  
   return (
-    <InputDiv>
+    <InputDiv className={id}>
       <LabelDiv>
         <Label label={label} labelColor={labelColor} id={id} />
         <ErrorMessage type={type} errorText={errorText} colorError={colorError} errors={errors} />
       </LabelDiv>
         <Input placeholderColor={placeholderColor}
-            borderColor={borderColor}
-            id={id}
-            placeholder={placeholder}
-            type={type}
-            value={value}
-            onChange={onChange}  
-            register={register}
-          />
+          borderColor={borderColor}
+          id={id}
+          placeholder={placeholder}
+          type={type}
+          value={value}
+          onChange={onChange}  
+          register={register}
+        />
     </InputDiv>
   )
 }
