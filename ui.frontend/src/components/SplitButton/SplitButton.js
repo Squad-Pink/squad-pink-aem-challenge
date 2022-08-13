@@ -11,8 +11,10 @@ const SplitButton = ({
   id,
   text,
   colorButton,
+  colorTextButton,
   firstIcon,
   secondIcon,
+  colorDivSplitBtn,
 }) => {
   const [isActive, setIsActive] = useState(false);
   const onClick = () => setIsActive(!isActive);
@@ -25,6 +27,7 @@ const SplitButton = ({
         id='certificates'
         textButton={text}
         colorButton={colorButton}
+        colorTextButton={colorTextButton}        
         onClick={onClick}
         onBlur={onBlur}
         src={firstIcon.src}
@@ -33,7 +36,7 @@ const SplitButton = ({
       <CertificatesStyled
         className={`certificatesDropdown ${isActive ? "active" : "inactive"}`}
       >
-        <UlStyled id={id}>{list}</UlStyled>
+        <UlStyled id={id} colorDivSplitBtn={colorDivSplitBtn}>{list}</UlStyled>
       </CertificatesStyled>
     </SplitButtonContainer>
   );

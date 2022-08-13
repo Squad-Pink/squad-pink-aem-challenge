@@ -4,6 +4,7 @@ import { ButtonStyled } from "./Button.styled";
 const Button = ({
   textButton,
   colorButton,
+  colorTextButton,
   id,
   src,
   src1,
@@ -19,6 +20,7 @@ const Button = ({
       onClick={onClick}
       onBlur={onBlur}
       onMouseDown={onMouseDown}
+      colorTextButton={colorTextButton}
     >
       <img src={src} alt='icon' />
       {textButton}
