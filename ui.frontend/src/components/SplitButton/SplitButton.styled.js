@@ -15,7 +15,7 @@ export const CertificatesStyled = styled.div`
 `;
 
 export const UlStyled = styled.ul`
-  background: rgba(7, 78, 232, 0.8);
+  background: ${(props) => props.colorDivSplitBtn};
   border-radius: ${toRem(4)};
   width: ${toRem(187)};
   height: ${toRem(103)};

@@ -14,7 +14,7 @@ export const ButtonStyled = styled.button`
   font-weight: 400;
   font-size: ${toRem(16)};
   line-height: ${toRem(18)};
-  color: #ffffff;
+  color: ${(props) => props.colorTextButton};
   display: flex;
   align-items: center;
   z-index: 50;
