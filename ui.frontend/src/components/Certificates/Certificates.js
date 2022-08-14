@@ -3,6 +3,7 @@ import { MapTo } from "@adobe/aem-react-editable-components";
 import SplitButton from "../SplitButton/SplitButton";
 import Button from "../Micro/Button/Button";
 import {CertificatesForm, CertificatesInput, SplitButtonContainer, RemoveBtn, MoreBtnContainer, DataInputsContainer, SubmitButtonContainer, CertificatesErrorMessage} from "./Certificates.styled";
+import {InputBlock} from "../InputBlock/InputBlock"
 
 const CertificatesContainer = () => {
     const [itemName, setItemName] = useState("");
@@ -85,7 +86,18 @@ const CertificatesContainer = () => {
                 </MoreBtnContainer>
                 .map                
                 <DataInputsContainer key={index}>
-                    <input></input>
+                    <InputBlock 
+                        register                    
+                        errors={errors}
+                        type={dataInputType}
+                        label={dataInputLabelText}
+                        labelColor={dataInputLabelColor}
+                        errorText={dataInputErrorText}
+                        colorError={dataInputErrorColor}
+                        placeholder={dataInputPlaceholderText}
+                        placeholderColor={dataInputPlaceholderColor}
+                        id={dataInputLabelText}
+                        borderColor={dataInputBorderColor}/>
                 </DataInputsContainer>
                 <SubmitButtonContainer>
                     <Button 
