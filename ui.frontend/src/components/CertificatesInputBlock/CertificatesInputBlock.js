@@ -1,7 +1,7 @@
 import React from 'react';
 import Label from '../Micro/Label/MicroLabel';
 import Input from '../Micro/Input/Input';
-import { InputDiv, LabelDiv } from './InputBlock.styled';
+import { InputDiv, LabelDiv, SplitButtonContainer, RemoveBtn, LiStyled, MoreBtnContainer, CertificatesErrorMessage } from './InputBlock.styled';
 import ErrorMessage from '../Micro/ErrorMessage/ErrorMessage';
 
 export const InputBlock = ({ 
@@ -124,7 +124,7 @@ export const InputBlock = ({
                     type="button"
                     id="More"
                     onClick={handleClick} />
-                <ErrorMessage type={type} errorText={errorText} colorError={colorError} errors={errors}  />
+                <ErrorMessage className="certificatesError" type={type} errorText={errorText} colorError={colorError} errors={errors}  />
                 <CertificatesErrorMessage className={`limit ${isActive ? "active" : "inactive"}`}>
                     {limitErrorText}</CertificatesErrorMessage>
             </MoreBtnContainer>
