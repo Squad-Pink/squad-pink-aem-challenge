@@ -5,7 +5,7 @@ import Button from "../Micro/Button/Button";
 import {CertificatesForm, CertificatesInput, SplitButtonContainer, RemoveBtn, MoreBtnContainer, DataInputsContainer, SubmitButtonContainer, CertificatesErrorMessage} from "./Certificates.styled";
 import {InputBlock} from "../InputBlock/InputBlock"
 
-const CertificatesContainer = () => {
+const CertificatesContainer = (certificatesContainer) => {
     const [itemName, setItemName] = useState("");
     const [addedItem, setAddedItem] = useState([]);
 
@@ -45,7 +45,7 @@ const CertificatesContainer = () => {
 
     return (
         <CertificatesForm>
-            .map
+            {certificatesContainer.map(({splitTitle}))}
             <CertificatesInput key={index}>
                 <input onChange={handleChange} />
                 <SplitButtonContainer className={`btnActive ${btnActive ? "active" : "inactive"}`}>
@@ -89,15 +89,15 @@ const CertificatesContainer = () => {
                     <InputBlock 
                         register                    
                         errors={errors}
-                        type={dataInputType}
-                        label={dataInputLabelText}
-                        labelColor={dataInputLabelColor}
-                        errorText={dataInputErrorText}
-                        colorError={dataInputErrorColor}
-                        placeholder={dataInputPlaceholderText}
-                        placeholderColor={dataInputPlaceholderColor}
-                        id={dataInputLabelText}
-                        borderColor={dataInputBorderColor}/>
+                        type={inputType}
+                        label={inputLabelText}
+                        labelColor={inputLabelColor}
+                        errorText={inputErrorText}
+                        colorError={inputErrorColor}
+                        placeholder={inputPlaceholderText}
+                        placeholderColor={inputPlaceholderColor}
+                        id={inputLabelText}
+                        borderColor={inputBorderColor}/>
                 </DataInputsContainer>
                 <SubmitButtonContainer>
                     <Button 
