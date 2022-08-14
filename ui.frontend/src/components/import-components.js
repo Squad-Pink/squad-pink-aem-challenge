@@ -21,7 +21,7 @@ import "./ExperienceFragment/ExperienceFragment";
 import "./XxXxx";
 import MeuComponente from "./MeuComponente";
 import "./Tabs/Tabs";
-
+import "../components/Social/Social";
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 
@@ -125,4 +125,3 @@ MapTo("reactapp/components/meu-componente")(MeuComponente, {
   emptyLabel: "Meu Componente",
   authorAcessibility,
 });
-
