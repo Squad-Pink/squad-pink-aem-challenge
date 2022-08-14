@@ -16,7 +16,7 @@ const InputStyled = ({
     switch (type) {
       case "text":
       case "email":
-      case "number":
+      case "tel":
       case "url":
         return (
           <Input

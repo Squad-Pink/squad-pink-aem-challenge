@@ -40,7 +40,7 @@ export const InputBlock = ({
   }
 
   return (
-    <InputDiv className={id}>
+    <InputDiv className={`${type}`}>
       <LabelDiv>
         <Label label={label} labelColor={labelColor} id={id} />
         <ErrorMessage

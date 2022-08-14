@@ -105,7 +105,11 @@ Social.defaultProps = {
 };
 
 Social.propTypes = {
-  inputType: PropTypes.string,
+  socialContainer: [
+    {
+      inputType: PropTypes.string,
+    },
+  ],
 };
 
 export default MapTo("reactapp/components/social-container")(Social);
