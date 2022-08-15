@@ -30,8 +30,8 @@ const SplitButton = ({
         colorTextButton={colorTextButton}        
         onClick={onClick}
         onBlur={onBlur}
-        src={firstIcon.src}
-        src1={secondIcon.src}
+        src={firstIcon}
+        src1={secondIcon}
       />
       <CertificatesStyled
         className={`certificatesDropdown ${isActive ? "active" : "inactive"}`}
