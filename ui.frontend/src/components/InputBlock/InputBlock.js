@@ -4,7 +4,7 @@ import ErrorMessage from '../Micro/ErrorMessage/ErrorMessage';
 import Input from '../Micro/Input/Input';
 import { InputDiv, LabelDiv } from './InputBlock.styled';
 
-export const InputBlock = ({ register, errors, label, labelColor, errorText, colorError, type, placeholderColor, id, borderColor, placeholder, value, onChange}) => {
+export const InputBlock = ({ register, errors, label, labelColor, errorText, colorError, type, id, borderColor, placeholder, value, onChange}) => {
 
   switch (type) {
     case "text":
@@ -32,7 +32,7 @@ export const InputBlock = ({ register, errors, label, labelColor, errorText, col
         <Label label={label} labelColor={labelColor} id={id} />
         <ErrorMessage type={type} errorText={errorText} colorError={colorError} errors={errors} />
       </LabelDiv>
-        <Input placeholderColor={placeholderColor}
+        <Input
           borderColor={borderColor}
           id={id}
           placeholder={placeholder}
