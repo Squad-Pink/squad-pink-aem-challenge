@@ -41,8 +41,7 @@ const Certificates = (
                 certificatesInputType,
                 certificatesLabelText,
                 certificatesLabelColor,
-                certificatesPlaceholderText,
-                certificatesPlaceholderColor,
+                certificatesPlaceholderText,                
                 certificatesBorderColor,
                 certificatesSplitText,
                 certificatesBtnColor,
@@ -62,8 +61,7 @@ const Certificates = (
                         type={CERTIFICATESTYPES[certificatesInputType]} 
                         label={certificatesLabelText}
                         labelColor={certificatesLabelColor}
-                        placeholder={certificatesPlaceholderText}
-                        placeholderColor={certificatesPlaceholderColor} 
+                        placeholder={certificatesPlaceholderText}                        
                         borderColor={certificatesBorderColor} 
                         id={certificatesLabelText}                      
                         text={certificatesSplitText} 
@@ -117,6 +115,26 @@ const Certificates = (
     )
 }
 Certificates.defaultProps = {
+    certificatesContainer:[
+        {
+            certificatesInputType: "Escolha o tipo de input",
+            certificatesLabelText: "Digite o texto da label",
+            certificatesLabelColor: "Escolha a cor da label",
+            certificatesPlaceholderText: "Digite o texto do placeholder",            
+            certificatesBorderColor: "Escolha a cor da borda do input",
+            certificatesSplitText: "Digite o texto do splitButton",
+            certificatesBtnColor: "Escolha a cor dos botões",
+            certificatesSplitFirstIcon: "https://www.freeiconspng.com/thumbs/upload-icon/upload-icon-22.png",
+            certificatesSplitSecondIcon: "https://www.freeiconspng.com/thumbs/upload-icon/upload-icon-22.png",
+            certificatesMoreText: "Digite o texto do botão de adicionar itens na lista",
+            certificatesBtnFirstIcon: "https://www.freeiconspng.com/thumbs/upload-icon/upload-icon-22.png",
+            certificatesBtnSecondIcon:"https://www.freeiconspng.com/thumbs/upload-icon/upload-icon-22.png",
+            certificatesErrorText: "Digite o texto da mensagem de erro",
+            certificatesErrorColor: "Escolha a cor da mensagem de erro",
+            certificatesLimitErrorText: "Digite o texto da mensagem de erro sobre o limite",   
+        }
+    ],
+
     dataCertificatesContainer: [
         {
             inputType: "Escolha o tipo de input",
