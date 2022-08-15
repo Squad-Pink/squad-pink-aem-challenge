@@ -23,7 +23,7 @@ const SplitButton = ({
   return (
     <SplitButtonContainer>
       <Button
-        type='certificates'
+        type='button'
         id='certificates'
         textButton={text}
         colorButton={colorButton}
