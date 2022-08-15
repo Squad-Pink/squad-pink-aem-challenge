@@ -114,9 +114,9 @@ const CertificatesInputBlock = ({
                             <RemoveBtn
                                 type="button"
                                 id="Remove"
-                                title="...&emsp;X"
-                                onMouseDown={removeItem(item)}
-                            />
+                                onMouseDown={removeItem(item)}>
+                                ...&emsp;X                                
+                                </RemoveBtn>                            
                         </>
                     ))}
                 />
@@ -132,7 +132,7 @@ const CertificatesInputBlock = ({
                     id="More"
                     onClick={handleClick}/>
                 <ErrorMessage className="certificatesError" type={type} errorText={errorText} colorError={colorError} errors={errors}  />
-                <CertificatesErrorMessage className={`limit ${isActive ? "active" : "inactive"}`} limitErrorColor={limitErrorColor}>
+                <CertificatesErrorMessage className={`limit ${isActive ? "active" : "inactive"}`} limitErrorColor={colorError}>
                     {limitErrorText}</CertificatesErrorMessage>
             </MoreBtnContainer>
         </>
