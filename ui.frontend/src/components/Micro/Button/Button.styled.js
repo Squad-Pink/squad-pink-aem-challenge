@@ -19,4 +19,12 @@ export const ButtonStyled = styled.button`
   align-items: center;
   z-index: 50;
   cursor: pointer;
+
+  &.certificates{
+    &:focus {
+    width: ${toRem(187)};  
+    justify-content: center;      
+    gap: ${toRem(18)};
+    }   
+    }    
 `;
