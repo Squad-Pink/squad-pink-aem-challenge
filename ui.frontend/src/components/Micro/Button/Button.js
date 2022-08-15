@@ -11,6 +11,7 @@ const Button = ({
   onClick,
   onBlur,
   onMouseDown,
+  type
 }) => {
   return (
     <ButtonStyled
@@ -21,6 +22,7 @@ const Button = ({
       onBlur={onBlur}
       onMouseDown={onMouseDown}
       colorTextButton={colorTextButton}
+      type={type}
     >
       <img src={src} alt='icon' />
       {textButton}
