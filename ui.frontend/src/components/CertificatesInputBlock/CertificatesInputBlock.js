@@ -1,10 +1,10 @@
 import React from 'react';
 import Label from '../Micro/Label/MicroLabel';
 import Input from '../Micro/Input/Input';
-import { InputDiv, LabelDiv, SplitButtonContainer, RemoveBtn, LiStyled, MoreBtnContainer, CertificatesErrorMessage } from './InputBlock.styled';
+import { InputDiv, LabelDiv, SplitButtonContainer, RemoveBtn, LiStyled, MoreBtnContainer, CertificatesErrorMessage } from './CertificatesInputBlock.styled';
 import ErrorMessage from '../Micro/ErrorMessage/ErrorMessage';
 
-export const InputBlock = ({ 
+const CertificatesInputBlock = ({ 
     register, 
     label, 
     labelColor, 
@@ -131,3 +131,5 @@ export const InputBlock = ({
         </>
     )
 }
+
+export default CertificatesInputBlock;
