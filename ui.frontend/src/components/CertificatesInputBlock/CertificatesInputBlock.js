@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from "react";
 import Label from '../Micro/Label/MicroLabel';
 import Input from '../Micro/Input/Input';
+import SplitButton from '../SplitButton/SplitButton';
+import Button from "../Micro/Button/Button";
 import { InputDiv, LabelDiv, SplitButtonContainer, RemoveBtn, LiStyled, MoreBtnContainer, CertificatesErrorMessage } from './CertificatesInputBlock.styled';
 import ErrorMessage from '../Micro/ErrorMessage/ErrorMessage';
 
@@ -8,14 +10,14 @@ const CertificatesInputBlock = ({
     register, 
     label, 
     labelColor, 
-    type, 
-    placeholderColor, 
+    type,     
     id, 
     borderColor, 
     placeholder, 
     value, 
     text, 
     colorButton, 
+    colorTextButton,
     firstIcon, 
     secondIcon, 
     textButton, 
@@ -25,7 +27,8 @@ const CertificatesInputBlock = ({
     colorError, 
     errors, 
     limitErrorColor,
-    limitErrorText 
+    limitErrorText, 
+    colorDivSplitBtn
     }) => {
 
     const [btnActive, setBtnActive] = useState(false);
@@ -54,13 +57,13 @@ const CertificatesInputBlock = ({
         setItemName(e.target.value);
     }
 
-    function handleClick() {
+    function handleClick() {               
         if (addedItem.length <= 4) {
             setAddedItem([...addedItem, itemName]);
             activatorBtn();
         } else {
             isError();
-        }
+        }        
     };
 
     switch (type) {
@@ -86,7 +89,7 @@ const CertificatesInputBlock = ({
                 <LabelDiv>
                     <Label label={label} labelColor={labelColor} id={id} />
                 </LabelDiv>
-                <Input placeholderColor={placeholderColor}
+                <Input 
                     borderColor={borderColor}
                     id={id}
                     placeholder={placeholder}
@@ -100,8 +103,10 @@ const CertificatesInputBlock = ({
                 <SplitButton
                     text={text}
                     colorButton={colorButton}
+                    colorTextButton={colorTextButton}
                     firstIcon={firstIcon}
                     secondIcon={secondIcon}
+                    colorDivSplitBtn={colorDivSplitBtn}
                     id="list"
                     list={addedItem.map((item) => (
                         <>
@@ -120,11 +125,12 @@ const CertificatesInputBlock = ({
                 <Button
                     textButton={textButton}
                     colorButton={colorButton}
+                    colorTextButton={colorTextButton}
                     src={src}
                     src1={src1}
                     type="button"
                     id="More"
-                    onClick={handleClick} />
+                    onClick={handleClick}/>
                 <ErrorMessage className="certificatesError" type={type} errorText={errorText} colorError={colorError} errors={errors}  />
                 <CertificatesErrorMessage className={`limit ${isActive ? "active" : "inactive"}`} limitErrorColor={limitErrorColor}>
                     {limitErrorText}</CertificatesErrorMessage>
