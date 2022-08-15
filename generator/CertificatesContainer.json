@@ -148,25 +148,39 @@
             "json-property": "certificatesBtnColor"
           },
           {
+            "field": "certificatesBtnTextColor",
+            "type": "textfield",
+            "label": "Escolha a cor dos textos dos botões",
+            "json-expose": true,
+            "json-property": "certificatesBtnTextColor"
+          },
+          {
             "field": "certificatesSplitFirstIcon",
             "type": "image",
             "label": "Escolha o ícone a esquerda do texto do splitbutton",
             "json-expose": true,
-            "json-property": "certificatesSplitFirstIcon:"
+            "json-property": "certificatesSplitFirstIcon"
           },
           {
-            "field": " certificatesSplitSecondIcon",
+            "field": "certificatesSplitSecondIcon",
             "type": "image",
             "label": "Escolha o ícone a direita do texto do splitbutton",
             "json-expose": true,
-            "json-property": " certificatesSplitSecondIcon"
+            "json-property": "certificatesSplitSecondIcon"
+          },
+          {
+            "field": "certificatesSplitDivColor",
+            "type": "textfield",
+            "label": "Escolha a cor de fundo da lista",
+            "json-expose": true,
+            "json-property": "certificatesSplitDivColor"
           },
           {
             "field": "certificatesMoreText",
             "type": "textfield",
             "label": "Digite o texto do botão de adicionar itens na lista",
             "json-expose": true,
-            "json-property": "certificatesMoreText:"
+            "json-property": "certificatesMoreText"
           },
           {
             "field": "certificatesBtnFirstIcon",
