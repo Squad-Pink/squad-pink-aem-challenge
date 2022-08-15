@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import Button from "../Micro/Button/Button";
-import { CertificatesForm, CertificatesInput, DataInputsContainer, SubmitButtonContainer, } from "./Certificates.styled";
+import { CertificatesForm, CertificatesInput, DataInputsContainer, SubmitButtonContainer } from "./Certificates.styled";
 import { InputBlock } from "../InputBlock/InputBlock"
 import CertificatesInputBlock from "../CertificatesInputBlock/CertificatesInputBlock";
+import PropTypes from "prop-types";
+import { useForm } from "react-hook-form";
 
-const Certificates = (
+const Certificates = ({
     certificatesContainer,
     dataCertificatesContainer,
     submitBtnTitle,
     submitBtnColor,
     submitColorText,
-    submitFirstIcon = {},
-    submitSecondIcon = {},
-) => {
+    submitFirstIcon ={},
+    submitSecondIcon ={},
+}) => {
 
     const {
         register,
@@ -36,7 +38,7 @@ const Certificates = (
     };
 
     return (
-        <CertificatesForm onSubmit={handleSubmit}>
+        <CertificatesForm>
             {certificatesContainer.map(({
                 certificatesInputType,
                 certificatesLabelText,
@@ -45,18 +47,20 @@ const Certificates = (
                 certificatesBorderColor,
                 certificatesSplitText,
                 certificatesBtnColor,
-                certificatesSplitFirstIcon,
-                certificatesSplitSecondIcon,
+                certificatesBtnTextColor,
+                certificatesSplitFirstIcon ={},
+                certificatesSplitSecondIcon ={},
+                certificatesSplitDivColor,
                 certificatesMoreText,
-                certificatesBtnFirstIcon,
-                certificatesBtnSecondIcon,
+                certificatesBtnFirstIcon ={},
+                certificatesBtnSecondIcon={},
                 certificatesErrorText,
                 certificatesErrorColor,
                 certificatesLimitErrorText
              }, index) => (
                 <CertificatesInput key={index}>
                     <CertificatesInputBlock
-                        register 
+                        register
                         errors={errors}
                         type={CERTIFICATESTYPES[certificatesInputType]} 
                         label={certificatesLabelText}
@@ -66,11 +70,13 @@ const Certificates = (
                         id={certificatesLabelText}                      
                         text={certificatesSplitText} 
                         colorButton={certificatesBtnColor}
-                        firstIcon={certificatesSplitFirstIcon} 
-                        secondIcon={certificatesSplitSecondIcon}
+                        colorTextButton={certificatesBtnTextColor}
+                        firstIcon={certificatesSplitFirstIcon.src} 
+                        secondIcon={certificatesSplitSecondIcon.src}
+                        colorDivSplitBtn={certificatesSplitDivColor}
                         textButton={certificatesMoreText} 
-                        src={certificatesBtnFirstIcon}
-                        src1={certificatesBtnSecondIcon}
+                        src={certificatesBtnFirstIcon.src}
+                        src1={certificatesBtnSecondIcon.src}
                         errorText={certificatesErrorText} 
                         colorError={certificatesErrorColor}                        
                         limitErrorText={certificatesLimitErrorText} 
@@ -83,10 +89,10 @@ const Certificates = (
                 inputLabelText,
                 inputLabelColor,
                 inputErrorText,
-                inputColorError,
+                inputErrorColor,
                 inputPlaceholderText,
                 inputBorderColor,
-            }, index))};
+            }, index) => (
             <DataInputsContainer key={index}>
                 <InputBlock
                     register
@@ -97,9 +103,10 @@ const Certificates = (
                     errorText={inputErrorText}
                     colorError={inputErrorColor}
                     placeholder={inputPlaceholderText}
-                    borderColor={inputBorderColor} />
-                id={inputLabelText}
+                    borderColor={inputBorderColor} 
+                    id={inputLabelText}/>
             </DataInputsContainer>
+            ))};
             <SubmitButtonContainer>
                 <Button
                     type="submit"
@@ -161,6 +168,11 @@ Certificates.propTypes = {
             inputType: PropTypes.string,
         },
     ],
+    certificatesContainer: [
+        {
+            certificatesInputType: PropTypes.string,
+        }
+    ]
 };
 
 export default MapTo("reactapp/components/certificates-container")(Certificates);
