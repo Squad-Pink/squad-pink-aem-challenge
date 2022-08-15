@@ -22,7 +22,18 @@ box-sizing: border-box;
 `;
 
 export const BirthdayContainer = styled.div` 
-  display: grid;
-  grid-template-columns: 21% 21% 21% auto;    
-  gap: 1.375rem;
+  display: grid;  
+  grid-template-rows: auto auto;   
 `;
+
+export const LabelContainer = styled.div`
+grid-row: 1 / 2;
+display: block;
+`;
+
+export const DateContainer = styled.div`
+display: grid;
+grid-template-columns: 21% 21% 21% auto;  
+gap: 1.375rem;
+grid-row: 2 / 3;
+`
