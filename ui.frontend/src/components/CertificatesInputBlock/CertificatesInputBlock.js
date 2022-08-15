@@ -8,8 +8,7 @@ const CertificatesInputBlock = ({
     register, 
     label, 
     labelColor, 
-    type, 
-    placeholderColor, 
+    type,     
     id, 
     borderColor, 
     placeholder, 
@@ -86,7 +85,7 @@ const CertificatesInputBlock = ({
                 <LabelDiv>
                     <Label label={label} labelColor={labelColor} id={id} />
                 </LabelDiv>
-                <Input placeholderColor={placeholderColor}
+                <Input 
                     borderColor={borderColor}
                     id={id}
                     placeholder={placeholder}
