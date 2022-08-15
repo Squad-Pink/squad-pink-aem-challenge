@@ -4,7 +4,8 @@ import { toRem } from "../../utils/convertToRem";
 export const CertificatesForm = styled.form`
     margin-right: ${toRem(55)};
     margin-left: ${toRem(47)};
-    width: 100%;
+    max-width: ${toRem(617)};
+    margin: auto;
     display: grid;
     grid-template-columns: 22.5% 77.5%;
     grid-template-rows: auto ${toRem(77)} auto auto;
@@ -15,12 +16,15 @@ export const CertificatesForm = styled.form`
 `;
 
 export const CertificatesInput = styled.div`
-     grid-column: 1 / 3;    
+    grid-column: 1 / 3;    
+    display: grid;
+    grid-template-columns: 50% 50%;     
+    max-height: ${toRem(150)};
 `;
 
 export const DataInputsContainer = styled.div`
     grid-column: 1 / 3;
-    margin-top: ${toRem(3)};
+    margin-top: ${toRem(26)};
 `;
 
 export const SubmitButtonContainer = styled.div`
