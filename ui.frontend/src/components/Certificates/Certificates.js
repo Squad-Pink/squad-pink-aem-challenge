@@ -36,7 +36,7 @@ const Certificates = ({
         type4: "email",
         type5: "checkbox",
     };
-
+  
     return (
         <CertificatesForm>
             {certificatesContainer.map(({
@@ -83,7 +83,7 @@ const Certificates = ({
                         limiteErrorColor={certificatesErrorColor}
                     />
                 </CertificatesInput>
-            ))};
+            ))}
             {dataCertificatesContainer.map(({
                 inputType,
                 inputLabelText,
@@ -106,7 +106,7 @@ const Certificates = ({
                     borderColor={inputBorderColor} 
                     id={inputLabelText}/>
             </DataInputsContainer>
-            ))};
+            ))}
             <SubmitButtonContainer>
                 <Button
                     type="submit"
