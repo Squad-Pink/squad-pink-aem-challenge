@@ -3,7 +3,7 @@ import Select from '../Micro/Select/Select';
 import { Result, BirthdayContainer, LabelContainer, DateContainer } from './Birthday.styled';
 import Label from '../Micro/Label/MicroLabel';
 
-const Birthday = ({labelColor, labelTitle, labelDay, borderColor, labelYear}) => {
+const Birthday = ({labelColor, labelTitle, labelMonth, labelDay, borderColor, labelYear}) => {
   const [day, setDay] = useState();
   const [month, setMonth] = useState();
   const [year, setYear] = useState(0);
