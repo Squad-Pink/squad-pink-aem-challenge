@@ -1,120 +1,103 @@
 import React, { useState } from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
-import SplitButton from "../SplitButton/SplitButton";
 import Button from "../Micro/Button/Button";
-import {CertificatesForm, CertificatesInput, SplitButtonContainer, RemoveBtn, MoreBtnContainer, DataInputsContainer, SubmitButtonContainer, CertificatesErrorMessage} from "./Certificates.styled";
-import {InputBlock} from "../InputBlock/InputBlock"
+import { CertificatesForm, CertificatesInput, DataInputsContainer, SubmitButtonContainer, } from "./Certificates.styled";
+import { InputBlock } from "../InputBlock/InputBlock"
 
-const CertificatesContainer = (certificatesContainer) => {
-    const [itemName, setItemName] = useState("");
-    const [addedItem, setAddedItem] = useState([]);
+const Certificates = (
+    certificatesContainer,
+    dataCertificatesContainer,
+    submitBtnTitle,
+    submitBtnColor,
+    submitColorText,
+    submitFirstIcon = {},
+    submitSecondIcon = {},
+) => {
 
-    const [btnActive, setBtnActive] = useState(false);
-    const activatorBtn = () => setBtnActive(true);
-
-    const [isActive, setIsActive] = useState(false);
-    const isError = () => setIsActive(!isActive);
-
-    const itemList = [...addedItem, itemName];
-
-    function handleChange(e) {
-        setItemName(e.target.value);
-    }
-
-    const removeItem = (itemOption) => () => {
-        if (addedItem.length == 5) {
-            setAddedItem((addedItem) =>
-                addedItem.filter((i) => i !== itemOption)
-            );
-            isError();
-        } else {
-            setAddedItem((addedItem) =>
-                addedItem.filter((i) => i !== itemOption)
-            );
-        }
+    const CERTIFICATESTYPES = {
+        type1: "text",
+        type2: "url",
+        type3: "tel",
+        type4: "email",
     };
-
-    function handleClick() {
-        if (addedItem.length <= 4) {
-            setAddedItem([...addedItem, itemName]);
-            activatorBtn();
-        } else {
-            isError();
-        }
+    const TYPES = {
+        type1: "text",
+        type2: "url",
+        type3: "tel",
+        type4: "email",
+        type5: "checkbox",
     };
 
     return (
         <CertificatesForm>
-            {certificatesContainer.map(({splitTitle}))}
+            {certificatesContainer.map(({  },index) => (
             <CertificatesInput key={index}>
-                <input onChange={handleChange} />
-                <SplitButtonContainer className={`btnActive ${btnActive ? "active" : "inactive"}`}>
-                    <SplitButton
-                        text={splitTitle}
-                        colorButton={splitBtnColor}
-                        firstIcon={splitFirstIcon.src}
-                        secondIcon={splitSecondIcon.src}
-                        id="list"
-                        list={addedItem.map((item) => (
-                            <>
-                                <LiStyled key={item + 1}>{item}</LiStyled>
-                                <RemoveBtn
-                                    type="button"
-                                    id="Remove"
-                                    title="...&emsp;X"
-                                    onMouseDown={removeItem(item)}
-                                />
-                            </>
-                        ))}
-                    />
-                </SplitButtonContainer>
-                </CertificatesInput>
-                <MoreBtnContainer>
-                    <Button 
-                        textButton={moreBtnTitle}
-                        colorButton={moreBtnColor}                        
-                        src={moreFirstIcon.src}
-                        src1={moreSecondIcon.src}                      
-                        type="button" 
-                        id="More"                         
-                        onClick={handleClick} />
-                    {errors.idDoInput && (
-                        <CertificatesErrorMessage>{inputErrorMessage}</CertificatesErrorMessage>
-                    )}
-                    <CertificatesErrorMessage className={`limit ${isActive ? "active" : "inactive"}`}>
-                        {limitErrorMessage}</CertificatesErrorMessage>
-                </MoreBtnContainer>
-                .map                
-                <DataInputsContainer key={index}>
-                    <InputBlock 
-                        register                    
-                        errors={errors}
-                        type={inputType}
-                        label={inputLabelText}
-                        labelColor={inputLabelColor}
-                        errorText={inputErrorText}
-                        colorError={inputErrorColor}
-                        placeholder={inputPlaceholderText}
-                        placeholderColor={inputPlaceholderColor}
-                        id={inputLabelText}
-                        borderColor={inputBorderColor}/>
-                </DataInputsContainer>
-                <SubmitButtonContainer>
-                    <Button 
-                    type="submit"                     
+
+            </CertificatesInput>
+            ))}; 
+            {dataCertificatesContainer.map(({
+                inputType,
+                inputLabelText,
+                inputLabelColor,
+                inputErrorText,
+                inputColorError,
+                inputPlaceholderText,
+                inputBorderColor,
+            }, index))};
+            <DataInputsContainer key={index}>
+                <InputBlock
+                    register
+                    errors={errors}
+                    type={TYPES[inputType]}
+                    label={inputLabelText}
+                    labelColor={inputLabelColor}
+                    errorText={inputErrorText}
+                    colorError={inputErrorColor}
+                    placeholder={inputPlaceholderText}
+                    borderColor={inputBorderColor} />
+                id={inputLabelText}
+            </DataInputsContainer>
+            <SubmitButtonContainer>
+                <Button
+                    type="submit"
                     textButton={submitBtnTitle}
-                    colorButton={submitBtnColor}                        
+                    colorButton={submitBtnColor}
+                    colorTextButton={submitColorText}
                     src={submitFirstIcon.src}
-                    src1={submitSecondIcon.src}                                      
-                    id="Submit"       
-                    />
-                </SubmitButtonContainer>
+                    src1={submitSecondIcon.src}
+                    id="Submit"
+                />
+            </SubmitButtonContainer>
         </CertificatesForm>
     )
-
-    Certificates.defaultProps = {
-
-    }
 }
+Certificates.defaultProps = {
+    dataCertificatesContainer: [
+        {
+            inputType: "Escolha o tipo de input",
+            inputLabelText: "Digite o texto da label",
+            inputLabelColor: "Escolha a cor da label",
+            inputErrorText: "Digite o texto da mensagem de erro",
+            inputColorError: "Escolha a cor da mensagem de erro",
+            inputPlaceholderText: "Digite o texto do placeholder",
+            inputBorderColor: "Escolha a cor da borda do input",
+        },
+    ],
+    submitBtnTitle: "Digite o texto do botão",
+    submitBtnColor: "Escolha a cor do botão",
+    submitColorText: "Escolha a cor do texto ",
+    submitFirstIcon:
+        "https://www.freeiconspng.com/thumbs/upload-icon/upload-icon-22.png",
+    submitSecondIcon:
+        "https://www.freeiconspng.com/thumbs/upload-icon/upload-icon-22.png",
+};
 
-export default MapTo("reactapp/components/certificates-container")(CertificatesContainer);
+Certificates.propTypes = {
+    dataCertificatesContainer: [
+        {
+            inputType: PropTypes.string,
+        },
+    ],
+};
+
+export default MapTo("reactapp/components/certificates-container")(Certificates);
