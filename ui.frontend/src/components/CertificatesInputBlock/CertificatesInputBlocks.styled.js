@@ -68,7 +68,7 @@ export const CertificatesErrorMessage = styled.p`
     font-family: "Nunito", sans-serif;
     font-size: ${toRem(14)};
     text-align: right;
-    color: #FF0000;
+    color: ${(props) => props.limitErrorColor};
     font-weight: 400;  
     margin-top: ${toRem(5)};
     max-width: 30ch;
