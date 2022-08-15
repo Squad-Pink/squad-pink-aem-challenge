@@ -3,6 +3,7 @@ import { MapTo } from "@adobe/aem-react-editable-components";
 import Button from "../Micro/Button/Button";
 import { CertificatesForm, CertificatesInput, DataInputsContainer, SubmitButtonContainer, } from "./Certificates.styled";
 import { InputBlock } from "../InputBlock/InputBlock"
+import CertificatesInputBlock from "../CertificatesInputBlock/CertificatesInputBlock";
 
 const Certificates = (
     certificatesContainer,
@@ -13,6 +14,12 @@ const Certificates = (
     submitFirstIcon = {},
     submitSecondIcon = {},
 ) => {
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm();
 
     const CERTIFICATESTYPES = {
         type1: "text",
@@ -29,12 +36,50 @@ const Certificates = (
     };
 
     return (
-        <CertificatesForm>
-            {certificatesContainer.map(({  },index) => (
-            <CertificatesInput key={index}>
-
-            </CertificatesInput>
-            ))}; 
+        <CertificatesForm onSubmit={handleSubmit}>
+            {certificatesContainer.map(({
+                certificatesInputType,
+                certificatesLabelText,
+                certificatesLabelColor,
+                certificatesPlaceholderText,
+                certificatesPlaceholderColor,
+                certificatesBorderColor,
+                certificatesSplitText,
+                certificatesBtnColor,
+                certificatesSplitFirstIcon,
+                certificatesSplitSecondIcon,
+                certificatesMoreText,
+                certificatesBtnFirstIcon,
+                certificatesBtnSecondIcon,
+                certificatesErrorText,
+                certificatesErrorColor,
+                certificatesLimitErrorText
+             }, index) => (
+                <CertificatesInput key={index}>
+                    <CertificatesInputBlock
+                        register 
+                        errors={errors}
+                        type={CERTIFICATESTYPES[certificatesInputType]} 
+                        label={certificatesLabelText}
+                        labelColor={certificatesLabelColor}
+                        placeholder={certificatesPlaceholderText}
+                        placeholderColor={certificatesPlaceholderColor} 
+                        borderColor={certificatesBorderColor} 
+                        id={certificatesLabelText}                      
+                        text={certificatesSplitText} 
+                        colorButton={certificatesBtnColor}
+                        firstIcon={certificatesSplitFirstIcon} 
+                        secondIcon={certificatesSplitSecondIcon}
+                        textButton={certificatesMoreText} 
+                        src={certificatesBtnFirstIcon}
+                        src1={certificatesBtnSecondIcon}
+                        errorText={certificatesErrorText} 
+                        colorError={certificatesErrorColor}                        
+                        limitErrorText={certificatesLimitErrorText} 
+                        limiteErrorColor={certificatesErrorColor}
+                    />
+                </CertificatesInput>
+            ))};
             {dataCertificatesContainer.map(({
                 inputType,
                 inputLabelText,
