@@ -7,6 +7,7 @@ const InputStyled = ({
   type,
   value,
   onChange,
+  onInput,  
   checkboxColor,
   label,
   borderColor,
@@ -26,13 +27,17 @@ const InputStyled = ({
             type={type}
             value={value}
             onChange={onChange}
+<<<<<<< HEAD
+=======
+            onInput={onInput}
+>>>>>>> 3f41bc9bc2b305a56f414149caa14b9c0193792c
             {...register(id)}
           />
         );
       case "checkbox":
         return (
           <CheckboxContainer checkboxColor={checkboxColor}>
-            <Input id={id} type={type} value={value} onChange={onChange} />
+            <Input id={id} type={type} value={value} onChange={onChange} {...register(id)} />
           </CheckboxContainer>
         );
       default:

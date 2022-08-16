@@ -23,15 +23,15 @@ const SplitButton = ({
   return (
     <SplitButtonContainer>
       <Button
-        type='certificates'
+        type='button'
         id='certificates'
         textButton={text}
         colorButton={colorButton}
         colorTextButton={colorTextButton}        
         onClick={onClick}
         onBlur={onBlur}
-        src={firstIcon.src}
-        src1={secondIcon.src}
+        src={firstIcon}
+        src1={secondIcon}
       />
       <CertificatesStyled
         className={`certificatesDropdown ${isActive ? "active" : "inactive"}`}

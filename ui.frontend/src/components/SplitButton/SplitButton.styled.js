@@ -17,10 +17,11 @@ export const CertificatesStyled = styled.div`
 export const UlStyled = styled.ul`
   background: ${(props) => props.colorDivSplitBtn};
   border-radius: ${toRem(4)};
-  width: ${toRem(187)};
-  height: ${toRem(103)};
+  width: ${toRem(187)};  
+  max-height: ${toRem(103)};
+  row-gap: ${toRem(2)};
   display: grid;
-  grid-template-rows: 24.64% 18.84% 18.84% 18.84% 18.84%;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-columns: 79% 21%;
   margin-top: ${toRem(-6)};
   padding-top: ${toRem(6)};
