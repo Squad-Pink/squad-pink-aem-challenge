@@ -16,7 +16,7 @@ const InputStyled = ({
     switch (type) {
       case "text":
       case "email":
-      case "number":
+      case "tel":
       case "url":
         return (
           <Input
@@ -26,13 +26,13 @@ const InputStyled = ({
             type={type}
             value={value}
             onChange={onChange}
-            {...register(type)}
+            {...register(id)}
           />
         );
       case "checkbox":
         return (
           <CheckboxContainer checkboxColor={checkboxColor}>
-            <Input id={id} type={type} value={value} onChange={onChange} />
+            <Input id={id} type={type} value={value} onChange={onChange} {...register(id)} />
           </CheckboxContainer>
         );
       default:
