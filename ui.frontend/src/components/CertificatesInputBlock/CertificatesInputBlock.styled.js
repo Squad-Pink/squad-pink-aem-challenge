@@ -65,6 +65,7 @@ export const LiStyled = styled.li`
 export const MoreBtnContainer = styled.div`
     display: grid;
     justify-items: end;
+    row-gap: ${toRem(4)};
 `;
 
 export const CertificatesErrorMessage = styled.p`
