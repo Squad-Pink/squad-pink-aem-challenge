@@ -131,7 +131,7 @@ const CertificatesInputBlock = ({
                     type="button"
                     id="More"
                     onClick={handleClick}/>
-                <ErrorMessage className="certificatesError" type={type} errorText={errorText} colorError={colorError} errors={errors}  />
+                <ErrorMessage className="certificatesError" id={id} errorText={errorText} colorError={colorError} errors={errors}  />
                 <CertificatesErrorMessage className={`limit ${isActive ? "active" : "inactive"}`} limitErrorColor={colorError}>
                     {limitErrorText}</CertificatesErrorMessage>
             </MoreBtnContainer>
