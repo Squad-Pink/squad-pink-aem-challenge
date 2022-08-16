@@ -6,6 +6,15 @@ import { InputBlock } from "../InputBlock/InputBlock"
 import CertificatesInputBlock from "../CertificatesInputBlock/CertificatesInputBlock";
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
+import {yupResolver} from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
+const schema = yup.object({
+    'Certificates':yup.string().required(),
+    'Team Name*':yup.string().required(),
+    'Institution*':yup.string().required(),
+    'Graduation':yup.string().required(),
+}).required()
 
 const Certificates = ({
     certificatesContainer,
@@ -17,11 +26,18 @@ const Certificates = ({
     submitSecondIcon ={},
 }) => {
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm();
+    const { register, handleSubmit, formState:{ errors } } = useForm({resolver: yupResolver(schema)});
+
+    const onSubmit = (data) => saveLocal(data)
+
+    const saveLocal = (value) => {
+        let localValues = Object.entries(value)
+        for(let i = 0; i < localValues.length; i++) {
+          localStorage.setItem(localValues[i][0],localValues[i][1])
+        }
+    }
+
+    
 
     const CERTIFICATESTYPES = {
         type1: "text",
@@ -37,8 +53,9 @@ const Certificates = ({
         type5: "checkbox",
     };
   
+   
     return (
-        <CertificatesForm>
+        <CertificatesForm onSubmit={handleSubmit(onSubmit)}>
             {certificatesContainer.map(({
                 certificatesInputType,
                 certificatesLabelText,
@@ -60,14 +77,14 @@ const Certificates = ({
              }, index) => (
                 <CertificatesInput key={index}>
                     <CertificatesInputBlock
-                        register
+                        register={register}
                         errors={errors}
                         type={CERTIFICATESTYPES[certificatesInputType]} 
                         label={certificatesLabelText}
                         labelColor={certificatesLabelColor}
                         placeholder={certificatesPlaceholderText}                        
                         borderColor={certificatesBorderColor} 
-                        id={certificatesLabelText}                      
+                        id={certificatesLabelText}                  
                         text={certificatesSplitText} 
                         colorButton={certificatesBtnColor}
                         colorTextButton={certificatesBtnTextColor}
@@ -89,19 +106,19 @@ const Certificates = ({
                 inputLabelText,
                 inputLabelColor,
                 inputErrorText,
-                inputErrorColor,
+                inputColorError,
                 inputPlaceholderText,
                 inputBorderColor,
             }, index) => (
             <DataInputsContainer key={index}>
                 <InputBlock
-                    register
+                    register={register}
                     errors={errors}
                     type={TYPES[inputType]}
                     label={inputLabelText}
                     labelColor={inputLabelColor}
                     errorText={inputErrorText}
-                    colorError={inputErrorColor}
+                    colorError={inputColorError}
                     placeholder={inputPlaceholderText}
                     borderColor={inputBorderColor} 
                     id={inputLabelText}/>
@@ -115,7 +132,7 @@ const Certificates = ({
                     colorTextButton={submitColorText}
                     src={submitFirstIcon.src}
                     src1={submitSecondIcon.src}
-                    id="Submit"
+                    id="Submit"                    
                 />
             </SubmitButtonContainer>
         </CertificatesForm>
