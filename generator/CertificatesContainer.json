@@ -1,0 +1,360 @@
+{
+  "project-settings": {
+    "code-owner": "React App",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "reactapp",
+    "model-interface-pkg": "com.reactapp.core.models",
+    "model-impl-pkg": "com.reactapp.core.models.impl"
+  },
+  "name": "certificates-container",
+  "title": "Certificates Container",
+  "group": "React App - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": [
+      "request"
+    ],
+    "generic-javadoc": false,
+    "properties-tabs": [
+      {
+        "id": "tab-1",
+        "label": "Input com lista",
+        "fields": [
+          "certificatesContainer"
+        ]
+      },
+      {
+        "id": "tab-2",
+        "label": "Inputs",
+        "fields": [
+          "dataCertificatesContainer"
+        ]
+      },
+      {
+        "id": "tab-3",
+        "label": "Submit Button",
+        "fields": [
+          "submitBtnTitle",
+          "submitBtnColor",
+          "submitColorText",
+          "submitFirstIcon",
+          "submitSecondIcon"
+        ]
+      }
+    ],
+    "properties": [
+      {
+        "field": "certificatesContainer",
+        "type": "multifield",
+        "label": "Adicione e edite os input com lista",
+        "model-name": "certificatesContainerModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "certificatesInputType",
+            "type": "select",
+            "label": "Escolha o tipo do input",
+            "json-expose": true,
+            "json-property": "certificatesInputType",
+            "attributes": {
+              "defaultValue": "Escolha o tipo do input",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "type1",
+                "attributes": {
+                  "text": "text",
+                  "value": "type1"
+                }
+              },
+              {
+                "field": "type2",
+                "attributes": {
+                  "selected": "true",
+                  "text": "url",
+                  "value": "type2"
+                }
+              },
+              {
+                "field": "type3",
+                "attributes": {
+                  "text": "tel",
+                  "value": "type3"
+                }
+              },
+              {
+                "field": "type4",
+                "attributes": {
+                  "text": "email",
+                  "value": "type4"
+                }
+              }
+            ]
+          },
+          {
+            "field": "certificatesLabelText",
+            "type": "textfield",
+            "label": "Digite o texto da label",
+            "json-expose": true,
+            "json-property": "certificatesLabelText"
+          },
+          {
+            "field": "certificatesLabelColor",
+            "type": "textfield",
+            "label": "Escolha a cor da label",
+            "json-expose": true,
+            "json-property": "certificatesLabelColor"
+          },
+          {
+            "field": "certificatesPlaceholderText",
+            "type": "textfield",
+            "label": "Digite o texto do placeholder",
+            "json-expose": true,
+            "json-property": "certificatesPlaceholderText"
+          },
+          {
+            "field": "certificatesBorderColor",
+            "type": "textfield",
+            "label": "Escolha a cor da borda do input",
+            "json-expose": true,
+            "json-property": "certificatesBorderColor"
+          },
+          {
+            "field": "certificatesSplitText",
+            "type": "textfield",
+            "label": "Digite o texto do splitButton",
+            "json-expose": true,
+            "json-property": "certificatesSplitText"
+          },
+          {
+            "field": "certificatesBtnColor",
+            "type": "textfield",
+            "label": "Escolha a cor dos botões",
+            "json-expose": true,
+            "json-property": "certificatesBtnColor"
+          },
+          {
+            "field": "certificatesBtnTextColor",
+            "type": "textfield",
+            "label": "Escolha a cor dos textos dos botões",
+            "json-expose": true,
+            "json-property": "certificatesBtnTextColor"
+          },
+          {
+            "field": "certificatesSplitFirstIcon",
+            "type": "image",
+            "label": "Escolha o ícone a esquerda do texto do splitbutton",
+            "json-expose": true,
+            "json-property": "certificatesSplitFirstIcon"
+          },
+          {
+            "field": "certificatesSplitSecondIcon",
+            "type": "image",
+            "label": "Escolha o ícone a direita do texto do splitbutton",
+            "json-expose": true,
+            "json-property": "certificatesSplitSecondIcon"
+          },
+          {
+            "field": "certificatesSplitDivColor",
+            "type": "textfield",
+            "label": "Escolha a cor de fundo da lista",
+            "json-expose": true,
+            "json-property": "certificatesSplitDivColor"
+          },
+          {
+            "field": "certificatesMoreText",
+            "type": "textfield",
+            "label": "Digite o texto do botão de adicionar itens na lista",
+            "json-expose": true,
+            "json-property": "certificatesMoreText"
+          },
+          {
+            "field": "certificatesBtnFirstIcon",
+            "type": "image",
+            "label": "Escolha o ícone a esquerda do texto do botão de adicionar itens na lista",
+            "json-expose": true,
+            "json-property": "certificatesBtnFirstIcon"
+          },
+          {
+            "field": "certificatesBtnSecondIcon",
+            "type": "image",
+            "label": "Escolha o ícone a direita do texto do botão de adicionar itens na lista",
+            "json-expose": true,
+            "json-property": "certificatesBtnSecondIcon"
+          },
+          {
+            "field": "certificatesErrorText",
+            "type": "textfield",
+            "label": "Digite o texto da mensagem de erro",
+            "json-expose": true,
+            "json-property": "certificatesErrorText"
+          },
+          {
+            "field": "certificatesLimitErrorText",
+            "type": "textfield",
+            "label": "A lista tem um limite de 5 itens, digite o texto da mensagem de erro caso haja tentativa de ultrapassá-lo",
+            "json-expose": true,
+            "json-property": "certificatesLimitErrorText"
+          },
+          {
+            "field": "certificatesErrorColor",
+            "type": "textfield",
+            "label": "Escolha a cor das mensagens de erro",
+            "json-expose": true,
+            "json-property": "certificatesErrorColor"
+          }
+        ]
+      },
+      {
+        "field": "dataCertificatesContainer",
+        "type": "multifield",
+        "label": "Adicione e edite os inputs",
+        "model-name": "dataCertificatesContainerModel",
+        "use-existing-model": false,
+        "json-expose": true,
+        "items": [
+          {
+            "field": "inputType",
+            "type": "select",
+            "label": "Escolha o tipo do input",
+            "json-expose": true,
+            "json-property": "inputType",
+            "attributes": {
+              "defaultValue": "Escolha o tipo do input",
+              "value": false
+            },
+            "items": [
+              {
+                "field": "type1",
+                "attributes": {
+                  "text": "text",
+                  "value": "type1"
+                }
+              },
+              {
+                "field": "type2",
+                "attributes": {
+                  "selected": "true",
+                  "text": "url",
+                  "value": "type2"
+                }
+              },
+              {
+                "field": "type3",
+                "attributes": {
+                  "text": "tel",
+                  "value": "type3"
+                }
+              },
+              {
+                "field": "type4",
+                "attributes": {
+                  "text": "email",
+                  "value": "type4"
+                }
+              },
+              {
+                "field": "type5",
+                "attributes": {
+                  "text": "checkbox",
+                  "value": "type5"
+                }
+              }
+            ]
+          },
+          {
+            "field": "inputLabelText",
+            "type": "textfield",
+            "label": "Digite o texto da label",
+            "json-expose": true,
+            "json-property": "inputLabelText"
+          },
+          {
+            "field": "inputLabelColor",
+            "type": "textfield",
+            "label": "Escolha a cor da label",
+            "json-expose": true,
+            "json-property": "inputLabelColor"
+          },
+          {
+            "field": "inputErrorText",
+            "type": "textfield",
+            "label": "Digite o texto da mensagem de erro",
+            "json-expose": true,
+            "json-property": "inputErrorText"
+          },
+          {
+            "field": "inputColorError",
+            "type": "textfield",
+            "label": "Escolha a cor da mensagem de erro",
+            "json-expose": true,
+            "json-property": "inputColorError"
+          },
+          {
+            "field": "inputPlaceholderText",
+            "type": "textfield",
+            "label": "Digite o texto do placeholder",
+            "json-expose": true,
+            "json-property": "inputPlaceholderText"
+          },
+          {
+            "field": "inputBorderColor",
+            "type": "textfield",
+            "label": "Escolha a cor da borda do input",
+            "json-expose": true,
+            "json-property": "inputBorderColor"
+          }
+        ]
+      },
+      {
+        "field": "submitBtnTitle",
+        "type": "textfield",
+        "label": "Digite o texto do botão",
+        "json-expose": true,
+        "json-property": "submitBtnTitle"
+      },
+      {
+        "field": "submitBtnColor",
+        "type": "textfield",
+        "label": "Escolha a cor do botão",
+        "json-expose": true,
+        "json-property": "submitBtnColor"
+      },
+      {
+        "field": "submitColorText",
+        "type": "textfield",
+        "label": "Escolha a cor do texto do botão",
+        "json-expose": true,
+        "json-property": "submitColorText"
+      },
+      {
+        "field": "submitFirstIcon",
+        "type": "image",
+        "label": "Escolha o ícone a esquerda do texto do botão ",
+        "json-expose": true,
+        "json-property": "submitFirstIcon"
+      },
+      {
+        "field": "submitSecondIcon",
+        "type": "image",
+        "label": "Escolha o ícone a direita do texto do botão",
+        "json-expose": true,
+        "json-property": "submitSecondIcon"
+      }
+    ]
+  }
+}
