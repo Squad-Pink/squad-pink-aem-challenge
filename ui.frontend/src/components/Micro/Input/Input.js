@@ -7,6 +7,7 @@ const InputStyled = ({
   type,
   value,
   onChange,
+  onInput,  
   checkboxColor,
   label,
   borderColor,
@@ -26,6 +27,7 @@ const InputStyled = ({
             type={type}
             value={value}
             onChange={onChange}
+            onInput={onInput}
             {...register(id)}
           />
         );
