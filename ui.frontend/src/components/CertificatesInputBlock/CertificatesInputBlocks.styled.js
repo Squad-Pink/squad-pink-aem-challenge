@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { toRem } from "../../utils/convertToRem";
 
 export const InputDiv = styled.div`
-    display: flex;
+    grid-column: 1 / 3;
     flex-direction: column;
     gap: 0.7rem;
     width: 100%;  
+    margin-bottom: ${toRem(18)};
 
     &.checkbox {
         flex-direction: row-reverse;
@@ -17,7 +18,8 @@ export const InputDiv = styled.div`
 export const LabelDiv = styled.div`
     display: flex;
     width: 100%;
-    gap: 3rem;    
+    gap: 3rem;   
+    margin-bottom: ${toRem(11.2)} 
 `;
 
 export const SplitButtonContainer = styled.div`
@@ -29,7 +31,7 @@ export const SplitButtonContainer = styled.div`
     visibility: visible;        
     }
     }
-    z-index: 10;
+    z-index: 10;    
 `;
 
 export const RemoveBtn = styled.button`
@@ -38,7 +40,8 @@ export const RemoveBtn = styled.button`
     font-style: normal;
     font-weight: 400;
     font-size: ${toRem(11)};
-    line-height: ${toRem(18)};    
+    line-height: ${toRem(18)};   
+    color: #FFFFFF; 
     padding: 0;
     height:${toRem(18)}; 
     border: none;
@@ -62,6 +65,7 @@ export const LiStyled = styled.li`
 export const MoreBtnContainer = styled.div`
     display: grid;
     justify-items: end;
+    row-gap: ${toRem(4)};
 `;
 
 export const CertificatesErrorMessage = styled.p`
