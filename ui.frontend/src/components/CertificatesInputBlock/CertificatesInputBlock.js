@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Label from '../Micro/Label/MicroLabel';
 import Input from '../Micro/Input/Input';
 import SplitButton from '../SplitButton/SplitButton';
@@ -40,6 +40,8 @@ const CertificatesInputBlock = ({
     const [isActive, setIsActive] = useState(false);
     const isError = () => setIsActive(!isActive);
 
+    const certificatesList = [...addedItem, itemName];
+
     const removeItem = (itemOption) => () => {
         if (addedItem.length == 5) {
             setAddedItem((addedItem) =>
@@ -54,17 +56,18 @@ const CertificatesInputBlock = ({
     };
 
     function handleChange(e) {
-        setItemName(e.target.value);
+        setItemName(e.target.value);        
     }
 
-    function handleClick() {               
+    function handleClick() {                
         if (addedItem.length <= 4) {
             setAddedItem([...addedItem, itemName]);
             activatorBtn();
         } else {
             isError();
         }        
-    };
+        localStorage.setItem("certificates", JSON.stringify(certificatesList));
+    };  
 
     switch (type) {
         case "text":
@@ -82,6 +85,7 @@ const CertificatesInputBlock = ({
         default:
             type = "aaa"
     }
+   
 
     return (
         <>
@@ -89,14 +93,15 @@ const CertificatesInputBlock = ({
                 <LabelDiv>
                     <Label label={label} labelColor={labelColor} id={id} />
                 </LabelDiv>
-                <Input 
+                <Input                     
                     borderColor={borderColor}
                     id={id}
                     placeholder={placeholder}
                     type={type}
-                    value={value}
-                    onChange={handleChange}
+                    value={value}      
+                    onInput={handleChange}                                 
                     register={register}
+                    
                 />
             </InputDiv>
             <SplitButtonContainer className={`btnActive ${btnActive ? "active" : "inactive"}`}>
@@ -110,7 +115,7 @@ const CertificatesInputBlock = ({
                     id="list"
                     list={addedItem.map((item) => (
                         <>
-                            <LiStyled key={item + 1}>{item}</LiStyled>
+                            <LiStyled key={item}>{item}</LiStyled>
                             <RemoveBtn
                                 type="button"
                                 id="Remove"
