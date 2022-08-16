@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Text from "../Micro/MicroText/MicroText";
-import { SuccessContainer, CertificatesContainer, ReturnContainer } from "./Success.styled";
+import {
+  SuccessContainer,
+  CertificatesContainer,
+  ReturnContainer,
+} from "./Success.styled";
 import Button from "../Micro/Button/Button";
-//import Title from "../Micro/Title/Title";
 //import { MapTo } from "@adobe/aem-react-editable-components";
-//import { useNavigate } from "react-router-dom";
 
-const Success = (props) => {
-  //const { setSocialContainer, setCertificateContainer } = props;
+const Success = ({
+  submitBtnTitle,
+  submitBtnColor,
+  submitColorText,
+  submitFirstIcon,
+  submitSecondIcon,
+  textColor,
+}) => {
   const [fullName, setFullName] = useState("");
   const [nickname, setNickname] = useState("");
   const [email, setEmail] = useState("");
@@ -20,8 +28,6 @@ const Success = (props) => {
   const [institution, setInstitution] = useState("");
   const [graduation, setGraduation] = useState("");
 
-  //let navigate = useNavigate();
-
   useEffect(() => {
     const fullName = `Full Name: ${localStorage.getItem("Full Name *")}`;
     const nickname = `Nickname: ${localStorage.getItem("Nickname")}`;
@@ -30,9 +36,7 @@ const Success = (props) => {
     const birthday = `Birthday: ${localStorage.getItem("Birthday *")}`;
     const linkedIn = `LinkedIn: ${localStorage.getItem("LinkedIn")}`;
     const gitHub = `GitHub: ${localStorage.getItem("GitHub *")}`;
-    const certificates = `${JSON.parse(
-      localStorage.getItem("Certificates")
-    )}`;
+    const certificates = `${JSON.parse(localStorage.getItem("Certificates"))}`;
     const teamName = `TeamName: ${localStorage.getItem("Team Name *")}`;
     const institution = `Institution: ${localStorage.getItem("Institution *")}`;
     const graduation = `Graduation: ${localStorage.getItem("Graduation *")}`;
@@ -81,23 +85,37 @@ const Success = (props) => {
 
   return (
     <SuccessContainer>
-      <Text title="Your data has been sent successfully!" />
-      <Text variable={fullName} />
-      <Text variable={nickname} />
-      <Text variable={email} />
-      <Text variable={phone} />
-      <Text variable={birthday} />
-      <Text variable={linkedIn} />
-      <Text variable={gitHub} />
+      <Text
+        textColor={textColor}
+        textP='Your data has been sent successfully!'
+      />
+      <Text textColor={textColor} TextP={fullName} />
+      <Text textColor={textColor} TextP={nickname} />
+      <Text textColor={textColor} TextP={email} />
+      <Text textColor={textColor} TextP={phone} />
+      <Text textColor={textColor} TextP={birthday} />
+      <Text textColor={textColor} TextP={linkedIn} />
+      <Text textColor={textColor} TextP={gitHub} />
       <CertificatesContainer>
-        <Text id="titlecertificate" variable={"Certificates: "} />
-        <Text id="contentCertificate" variable={certificates.replace(/\,/sg, "\n")} />
+        <Text textColor={textColor} textP={"Certificates: "} />
+        <Text
+          textColor={textColor}
+          textP={certificates.replace(/\,/gs, "\n")}
+        />
       </CertificatesContainer>
-      <Text variable={teamName} />
-      <Text variable={institution} />
-      <Text variable={graduation} />
+      <Text textColor={textColor} TextP={teamName} />
+      <Text textColor={textColor} TextP={institution} />
+      <Text textColor={textColor} TextP={graduation} />
       <ReturnContainer>
-        <Button id="Ending" title="Return" />
+        <Button
+          type='submit'
+          textButton={submitBtnTitle}
+          colorButton={submitBtnColor}
+          colorTextButton={submitColorText}
+          src={submitFirstIcon}
+          src1={submitSecondIcon}
+          id='Submit'
+        />
       </ReturnContainer>
     </SuccessContainer>
   );
