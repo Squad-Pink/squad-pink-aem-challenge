@@ -21,6 +21,7 @@ import "./ExperienceFragment/ExperienceFragment";
 import "./XxXxx";
 import MeuComponente from "./MeuComponente";
 import "./Tabs/Tabs";
+import "./Basic/Basic";
 
 
 import { MapTo } from "@adobe/aem-react-editable-components";
