@@ -15,7 +15,6 @@ const XxXxx = (props) => {
     <div>
       <p>My Text Component: {props.text}</p>
       <p>My Checkbox is: {props.checkbox ? "checked" : "unchecked"}</p>
-      <Social />
     </div>
   );
 };

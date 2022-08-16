@@ -12,7 +12,6 @@ export const InputBlock = ({
   errorText,
   colorError,
   type,
-  placeholderColor,
   id,
   borderColor,
   placeholder,
@@ -44,7 +43,7 @@ export const InputBlock = ({
       <LabelDiv>
         <Label label={label} labelColor={labelColor} id={id} />
         <ErrorMessage
-          type={type}
+          id={id}
           errorText={errorText}
           colorError={colorError}
           errors={errors}

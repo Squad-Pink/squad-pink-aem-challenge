@@ -1,18 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { InputBlock } from "../InputBlock/InputBlock";
 import { useForm } from "react-hook-form";
 import Button from "../Micro/Button/Button";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import PropTypes from "prop-types";
-//import { yupResolver } from "@hookform/resolvers/yup";
-//import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
-import {
-  FormContainer,
-  FormContent,
-  InputFormGroup,
-  ButtonFormGroup,
-} from "./Social.styled";
+import { FormContent, InputFormGroup, ButtonFormGroup } from "./Social.styled";
+
+const schema = yup
+  .object({
+    'GitHub *': yup.string().url().required(),
+  })
+  .required();
 
 const Social = ({
   socialContainer,
@@ -25,8 +26,27 @@ const Social = ({
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
-  } = useForm();
+  } = useForm({ resolver: yupResolver(schema) });
+
+  const onSubmit = (data) => {
+    saveLocal(data);
+    console.log(data)
+  }
+  const saveLocal = (value) => {
+    let localValues = Object.entries(value);
+    for (let i = 0; i < localValues.length; i++) {
+      localStorage.setItem(localValues[i][0], localValues[i][1]);
+    }
+  };
+
+  useEffect(() => {
+    const linkedInStorage = localStorage.getItem('LinkedIn') ;
+    const gitHubStorage = localStorage.getItem('GitHub *');
+    setValue('LinkedIn', linkedInStorage)
+    setValue('GitHub *', gitHubStorage)
+  }, [])
 
   const TYPES = {
     type1: "text",
@@ -36,8 +56,8 @@ const Social = ({
     type5: "checkbox",
   };
   return (
-    <FormContainer>
-      <FormContent>
+    <div className='formContainer'>
+      <FormContent onSubmit={handleSubmit(onSubmit)}>
         {socialContainer.map(
           (
             {
@@ -53,7 +73,7 @@ const Social = ({
           ) => (
             <InputFormGroup key={index}>
               <InputBlock
-                register
+                register={register}
                 errors={errors}
                 type={TYPES[inputType]}
                 label={inputLabelText}
@@ -79,7 +99,7 @@ const Social = ({
           />
         </ButtonFormGroup>
       </FormContent>
-    </FormContainer>
+    </div>
   );
 };
 
