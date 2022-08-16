@@ -1,6 +1,5 @@
 import React from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
-import Social from "../Social/Social";
 
 const XxXxxEditConfig = {
   emptyLabel: "Digite aqui o texto por favor",
