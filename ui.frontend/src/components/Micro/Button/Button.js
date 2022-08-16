@@ -11,7 +11,11 @@ const Button = ({
   onClick,
   onBlur,
   onMouseDown,
+<<<<<<< HEAD
+  type,
+=======
   type
+>>>>>>> 3f41bc9bc2b305a56f414149caa14b9c0193792c
 }) => {
   return (
     <ButtonStyled
