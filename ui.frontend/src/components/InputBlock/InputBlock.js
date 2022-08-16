@@ -30,7 +30,7 @@ export const InputBlock = ({ register, errors, label, labelColor, errorText, col
     <InputDiv className={id}>
       <LabelDiv>
         <Label label={label} labelColor={labelColor} id={id} />
-        <ErrorMessage type={type} errorText={errorText} colorError={colorError} errors={errors} />
+        <ErrorMessage errorText={errorText} colorError={colorError} errors={errors} id={id}/>
       </LabelDiv>
         <Input
           borderColor={borderColor}
