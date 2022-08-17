@@ -25,6 +25,9 @@ import "./Tabs/Tabs";
 import "./Basic/Basic";
 import "./Social/Social";
 import "./Certificates/Certificates";
+import "./Certificates/Certificates"
+import "./Basic/Basic"
+import "./Social/Social"
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 
