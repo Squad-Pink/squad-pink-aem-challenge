@@ -37,7 +37,6 @@ export const DateContainer = styled.div`
   grid-template-columns: 21% 21% 21% auto;  
   gap: 1.375rem;
   grid-row: 2 / 3; 
-
   @media (max-width: 768px) {
     grid-template-columns: auto 50%;    
     
