@@ -1,26 +1,22 @@
 import React from "react";
 import { SelectStyled, OptionStyled } from "./Select.styled";
 
-export const Select = ({ id, setDay, setMonth, setYear, borderColor, optionColor  }) => {
+export const Select = ({ id, borderColor, optionColor, onInput, onBlur  }) => {
   switch (id) {
     case "Day":
       return (
         <SelectDay 
           borderColor={borderColor} 
           optionColor={optionColor}
-          onChange={(e) => {
-            setDay(e.target.value);
-          }}
+          onInput={onInput}          
         />
       );
     case "Month":
       return (
         <SelectMonth 
           borderColor={borderColor} 
-          optionColor={optionColor}
-          onChange={(e) => {
-            setMonth(e.target.value);
-          }}
+          optionColor={optionColor}          
+          onInput={onInput}
         />
       );
     case "Year":
@@ -28,9 +24,8 @@ export const Select = ({ id, setDay, setMonth, setYear, borderColor, optionColor
         <SelectYear
           borderColor={borderColor} 
           optionColor={optionColor}
-          onChange={(e) => {
-            setYear(e.target.value);
-          }}
+          onBlur={onBlur}   
+          onInput={onInput}      
         />
       );
   }
@@ -38,7 +33,7 @@ export const Select = ({ id, setDay, setMonth, setYear, borderColor, optionColor
 
 export default Select;
 
-const SelectYear = ({ onChange }) => {
+const SelectYear = ({ onInput, onBlur }) => {
   let year = {
     years: [],
   };
@@ -52,12 +47,12 @@ const SelectYear = ({ onChange }) => {
 
   return (
     <>   
-        <SelectStyled onChange={onChange}>{optionYear}</SelectStyled>
+        <SelectStyled onInput={onInput} onBlur={onBlur}>{optionYear}</SelectStyled>
     </>
   );
 };
 
-const SelectMonth = ({ onChange }) => {
+const SelectMonth = ({ onInput }) => {
   let month = {
     months: [],
   };
@@ -74,12 +69,12 @@ const SelectMonth = ({ onChange }) => {
   ));
   return (
     <>      
-        <SelectStyled onChange={onChange}>{optionMonth}</SelectStyled>     
+        <SelectStyled onInput={onInput}>{optionMonth}</SelectStyled>     
     </>
   );
 };
 
-const SelectDay = ({ onChange }) => {
+const SelectDay = ({ onInput }) => {
   let day = {
     days: [],
   };
@@ -97,7 +92,7 @@ const SelectDay = ({ onChange }) => {
 
   return (
     <>    
-        <SelectStyled onChange={onChange}>{optionDate}</SelectStyled>
+        <SelectStyled onInput={onInput}>{optionDate}</SelectStyled>
     </>
   );
 };
