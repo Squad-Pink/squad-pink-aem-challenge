@@ -14,15 +14,23 @@ const XxXxxEditConfig = {
 };
 
 const schema = yup.object({
-  Age: yup.number().required(),
+  Age: yup.string().required(),  
 }).required();
+
+const saveLocal = (value) => {
+  let localValues = Object.entries(value)
+  for(let i = 0; i < localValues.length; i++) {
+    localStorage.setItem(localValues[i][0],localValues[i][1])
+  }
+}
 
 const XxXxx = (props) => {
   const { register, handleSubmit, formState:{ errors } } = useForm({
+    mode: 'onChange',
     resolver: yupResolver(schema)
   });
 
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => saveLocal(data)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>     

@@ -52,11 +52,11 @@ const Birthday = ({ labelColor, labelTitle, labelMonth, labelDay, borderColor, l
         </div>
         <div>
           <Label labelColor={labelColor} id="inputs" label={labelYear}/>
-          <Select id="Year" borderColor={borderColor} onInput={changeYear} onBlur={calculaAge} />
+          <Select id="Year" borderColor={borderColor} onInput={changeYear} onBlur={calculaAge}  />
         </div>
         <div>
           <Label labelColor={labelColor} id="inputs" label={labelAge} />
-          <Result borderColor={borderColor} id="Age" placeholder="Age" type="text" value={age} {...register("Age")} disabled/>
+          <Result borderColor={borderColor} id="Age" placeholder="Age" type="text" value={age} {...register("Age")} />
         </div>        
       </DateContainer>
     </BirthdayContainer>
