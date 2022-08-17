@@ -14,6 +14,8 @@ const Birthday = ({
   labelAge, 
   register, 
   errors,     
+  errorText,
+  colorError
   }) => {
 
     const [dayOption, setDayOption] = useState(0);
