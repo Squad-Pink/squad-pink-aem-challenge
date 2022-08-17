@@ -6,11 +6,12 @@ const InputStyled = ({
   placeholder,
   type,
   value,
-  onChange,  
+  onChange,
+  onInput,
   checkboxColor,
   label,
   borderColor,
-  register,
+  register
 }) => {
   const getInput = (type) => {
     switch (type) {
@@ -26,13 +27,20 @@ const InputStyled = ({
             type={type}
             value={value}
             onChange={onChange}
+            onInput={onInput}
             {...register(id)}
           />
         );
       case "checkbox":
         return (
           <CheckboxContainer checkboxColor={checkboxColor}>
-            <Input id={id} type={type} value={value} onChange={onChange} {...register(id)} />
+            <Input
+              id={id}
+              type={type}
+              value={value}
+              onChange={onChange}
+              {...register(id)}
+            />
           </CheckboxContainer>
         );
       default:

@@ -124,3 +124,4 @@ MapTo("reactapp/components/meu-componente")(MeuComponente, {
   emptyLabel: "Meu Componente",
   authorAcessibility,
 });
+

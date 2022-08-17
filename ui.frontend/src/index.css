@@ -35,27 +35,7 @@ body {
 }
 
 body {
-  background-color: #ECEEF2;
-}
-
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  height: 739px;
-  width: 617px;
-  border-radius: 1em;
-  margin: auto;
-  padding: auto;
-  background: #ffffff;
-}
-
-@media (max-width: 768px) {
-  body {
-    background:#FFFFFF;
-  }
-  .formContainer {
-    width: 100%;
-  }
+  background-color: #ffffff;
 }
 
 h1,
