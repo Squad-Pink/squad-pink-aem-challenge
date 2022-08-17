@@ -58,7 +58,7 @@ const Birthday = ({
     <BirthdayContainer>
       <LabelContainer>
         <Label labelColor={labelColor} id="Birthday" label={labelTitle}/>
-        <ErrorMessage errorText="TA ERRADO FIDAMAE" colorError={"red"} errors={errors} id="Age"/>
+        <ErrorMessage errorText={errorText} colorError={colorError} errors={errors} id="Age"/>
       </LabelContainer>
       <DateContainer>
         <div>
