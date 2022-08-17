@@ -6,7 +6,7 @@ export const InputDiv = styled.div`
     gap: 0.7rem;
     width: 100%;  
 
-    &.checkbox {
+    &.I {
         flex-direction: row-reverse;
         align-items: center;
         justify-content: flex-end;

@@ -27,8 +27,9 @@ export const BirthdayContainer = styled.div`
 `;
 
 export const LabelContainer = styled.div`
-grid-row: 1 / 2;
-display: block;
+display: flex;
+gap: 1.3rem;
+margin-bottom: 0.5rem;
 `;
 
 export const DateContainer = styled.div`

@@ -1,7 +1,7 @@
 import React from 'react';
 import {InputBlock} from "../InputBlock/InputBlock";
 
-const Checkbox = ({label, labelColor, errorText, colorError, borderColor, register, errors}) => {
+const Checkbox = ({label, labelColor, errorText, colorError, borderColor, register, errors, id}) => {
 
   return (
     <InputBlock
@@ -13,7 +13,7 @@ const Checkbox = ({label, labelColor, errorText, colorError, borderColor, regist
     errorText={errorText}
     colorError={colorError}
     borderColor={borderColor}
-    id="checkbox"
+    id={id}
   />
   )
 }
