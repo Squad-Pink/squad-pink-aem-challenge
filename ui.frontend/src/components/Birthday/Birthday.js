@@ -36,7 +36,7 @@ const Birthday = ({
     }  
       
     const calculateAge = async() =>{
-      getAge()       
+      getAge()
       ;
     }
     
