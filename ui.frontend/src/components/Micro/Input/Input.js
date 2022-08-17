@@ -11,7 +11,7 @@ const InputStyled = ({
   checkboxColor,
   label,
   borderColor,
-  register,
+  register
 }) => {
   const getInput = (type) => {
     switch (type) {

@@ -1,0 +1,75 @@
+{
+  "project-settings": {
+    "code-owner": "React App",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "reactapp",
+    "model-interface-pkg": "com.reactapp.core.models",
+    "model-impl-pkg": "com.reactapp.core.models.impl"
+  },
+  "name": "success",
+  "title": "Success",
+  "group": "React App - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": [
+      "request"
+    ],
+    "generic-javadoc": false,
+    "properties": [
+      {
+        "field": "textColor",
+        "label": "Escolha a cor do texto",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "textColor"
+      },
+      {
+        "field": "submitBtnTitle",
+        "type": "textfield",
+        "label": "Digite o texto do botão",
+        "json-expose": true,
+        "json-property": "submitBtnTitle"
+    },
+      {
+        "field": "submitBtnColor",
+        "type": "textfield",
+        "label": "Escolha a cor do botão",
+        "json-expose": true,
+        "json-property": "submitBtnColor"
+        },
+        {
+          "field": "submitColorText",
+          "type": "textfield",
+          "label": "Escolha a cor do texto do botão",
+          "json-expose": true,
+          "json-property": "submitColorText"
+          },
+          {
+            "field": "submitFirstIcon",
+            "type": "image",
+            "label": "Escolha o ícone à esquerda do texto do botão ",
+            "json-expose": true,
+            "json-property": "submitFirstIcon"
+            },
+            {
+              "field": "submitSecondIcon",
+              "type": "image",
+              "label": "Escolha o ícone à direita do texto do botão",
+              "json-expose": true,
+              "json-property": "submitSecondIcon"
+            }
+    ]
+  }
+}

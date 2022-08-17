@@ -18,14 +18,11 @@
 
 package com.reactapp.core.models.impl;
 
-import java.util.Collections;
-import java.util.List;
 import com.adobe.acs.commons.models.injectors.annotation.ChildResourceFromRequest;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.SocialContainer;
-import com.reactapp.core.models.socialContainerModel;
+import com.reactapp.core.models.Success;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -37,18 +34,16 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    SocialContainer.class,
+    Success.class,
     ComponentExporter.class
-}, resourceType = "reactapp/components/social-container")
+}, resourceType = "reactapp/components/success")
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class SocialContainerImpl
-    implements SocialContainer
+public class SuccessImpl
+    implements Success
 {
 
-    @ChildResourceFromRequest(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private List<socialContainerModel> socialContainer;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String submitBtnTitle;
+    private String textColor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String submitBtnColor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -61,14 +56,9 @@ public class SocialContainerImpl
     private Resource resource;
 
     @Override
-    public List<socialContainerModel> getSocialContainer() {
-        return socialContainer != null ? Collections.unmodifiableList(socialContainer) : null;
-    }
-
-    @Override
-    @JsonProperty("submitBtnTitle")
-    public String getSubmitBtnTitle() {
-        return submitBtnTitle;
+    @JsonProperty("textColor")
+    public String getTextColor() {
+        return textColor;
     }
 
     @Override

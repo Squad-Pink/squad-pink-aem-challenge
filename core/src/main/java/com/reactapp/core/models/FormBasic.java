@@ -25,16 +25,58 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code SocialContainer} Sling Model used for the {@code reactapp/components/social-container} component.
+ * Defines the {@code FormBasic} Sling Model used for the {@code reactapp/components/form-basic} component.
  * 
  */
 @ConsumerType
-public interface SocialContainer
+public interface FormBasic
     extends ComponentExporter
 {
 
 
-    List<socialContainerModel> getSocialContainer();
+    List<formBasicModel> getFormBasic();
+
+    @JsonProperty("birthdayLabelTitle")
+    String getBirthdayLabelTitle();
+
+    @JsonProperty("birthdayLabelDay")
+    String getBirthdayLabelDay();
+
+    @JsonProperty("birthdayLabelMonth")
+    String getBirthdayLabelMonth();
+
+    @JsonProperty("birthdayLabelYear")
+    String getBirthdayLabelYear();
+
+    @JsonProperty("birthdayLabelAge")
+    String getBirthdayLabelAge();
+
+    @JsonProperty("birthdayLabelColor")
+    String getBirthdayLabelColor();
+
+    @JsonProperty("birthdayErrorText")
+    String getBirthdayErrorText();
+
+    @JsonProperty("birthdayErrorColor")
+    String getBirthdayErrorColor();
+
+    @JsonProperty("birthdayBorderColor")
+    String getBirthdayBorderColor();
+
+    @JsonProperty("checkboxLabelText")
+    String getCheckboxLabelText();
+
+    @JsonProperty("checkboxLabelColor")
+    String getCheckboxLabelColor();
+
+    @JsonProperty("checkboxErrorText")
+    String getCheckboxErrorText();
+
+    @JsonProperty("checkboxColorError")
+    String getCheckboxColorError();
+
+    @JsonProperty("checkboxBorderColor")
+    String getCheckboxBorderColor();
 
     @JsonProperty("submitBtnTitle")
     String getSubmitBtnTitle();

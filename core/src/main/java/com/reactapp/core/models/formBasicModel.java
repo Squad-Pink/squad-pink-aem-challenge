@@ -24,11 +24,11 @@ import org.osgi.annotation.versioning.ConsumerType;
 
 
 /**
- * Defines the {@code socialContainerModel} Sling Model used for the multifield in {@code reactapp/components/social-container} component.
+ * Defines the {@code formBasicModel} Sling Model used for the multifield in {@code reactapp/components/form-basic} component.
  * 
  */
 @ConsumerType
-public interface socialContainerModel
+public interface formBasicModel
     extends ComponentExporter
 {
 
@@ -50,9 +50,6 @@ public interface socialContainerModel
 
     @JsonProperty("inputPlaceholderText")
     String getInputPlaceholderText();
-
-    @JsonProperty("inputPlaceholderColor")
-    String getInputPlaceholderColor();
 
     @JsonProperty("inputBorderColor")
     String getInputBorderColor();

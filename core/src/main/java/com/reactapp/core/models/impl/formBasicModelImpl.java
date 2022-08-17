@@ -21,7 +21,7 @@ package com.reactapp.core.models.impl;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.reactapp.core.models.socialContainerModel;
+import com.reactapp.core.models.formBasicModel;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Exporter;
@@ -33,12 +33,12 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(adaptables = {
     SlingHttpServletRequest.class
 }, adapters = {
-    socialContainerModel.class,
+    formBasicModel.class,
     ComponentExporter.class
 })
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class socialContainerModelImpl
-    implements socialContainerModel
+public class formBasicModelImpl
+    implements formBasicModel
 {
 
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -53,8 +53,6 @@ public class socialContainerModelImpl
     private String inputColorError;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String inputPlaceholderText;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String inputPlaceholderColor;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String inputBorderColor;
     @SlingObject
@@ -94,12 +92,6 @@ public class socialContainerModelImpl
     @JsonProperty("inputPlaceholderText")
     public String getInputPlaceholderText() {
         return inputPlaceholderText;
-    }
-
-    @Override
-    @JsonProperty("inputPlaceholderColor")
-    public String getInputPlaceholderColor() {
-        return inputPlaceholderColor;
     }
 
     @Override

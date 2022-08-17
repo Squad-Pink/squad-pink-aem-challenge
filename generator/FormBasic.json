@@ -1,0 +1,313 @@
+{
+    "project-settings": {
+        "code-owner": "React App",
+        "bundle-path": "../core/src/main/java",
+        "test-path": "../core/src/test/java",
+        "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+        "component-path": "reactapp",
+        "model-interface-pkg": "com.reactapp.core.models",
+        "model-impl-pkg": "com.reactapp.core.models.impl"
+    },
+    "name": "form-basic",
+    "title": "Form Basic",
+    "group": "React App - Content",
+    "type": "components",
+    "options": {
+        "js": false,
+        "jstxt": false,
+        "css": false,
+        "csstxt": false,
+        "html": false,
+        "html-content": false,
+        "slingmodel": true,
+        "testclass": false,
+        "junit-major-version": 5,
+        "content-exporter": true,
+        "model-adaptables": [
+            "request"
+        ],
+        "generic-javadoc": false,
+        "properties-tabs": [
+            {
+                "id": "tab-1",
+                "label": "Inputs",
+                "fields": [
+                    "formBasic"
+                ]
+            },
+            {
+                "id": "tab-2",
+                "label": "Birthday",
+                "fields": [
+                    "birthdayLabelTitle",
+                    "birthdayLabelDay",
+                    "birthdayLabelMonth",
+                    "birthdayLabelYear",
+                    "birthdayLabelAge",
+                    "birthdayLabelColor",
+                    "birthdayErrorText",
+                    "birthdayErrorColor",
+                    "birthdayBorderColor"
+                ]
+            },
+            {
+                "id": "tab-3",
+                "label": "Checkbox",
+                "fields": [
+                    "checkboxLabelText",
+                    "checkboxLabelColor",
+                    "checkboxErrorText",
+                    "checkboxColorError",
+                    "checkboxBorderColor"
+                ]
+            },
+            {
+                "id": "tab-4",
+                "label": "Button",
+                "fields": [
+                    "submitBtnTitle",
+                    "submitBtnColor",
+                    "submitColorText",
+                    "submitFirstIcon",
+                    "submitSecondIcon"
+                ]
+            }            
+        ],
+        "properties": [
+            {
+                "field": "formBasic",
+                "type": "multifield",
+                "label": "Adicione e edite os inputs",
+                "model-name": "formBasicModel",
+                "use-existing-model": false,
+                "json-expose": true,
+                "items": [
+                    {
+                        "field": "inputType",
+                        "type": "select",
+                        "label": "Escolha o tipo do input",
+                        "json-expose": true,
+                        "json-property": "inputType",
+                        "attributes": {
+                            "defaultValue": "Escolha o tipo do input",
+                            "value": false
+                        },
+                        "items": [
+                            {
+                                "field": "type1",
+                                "attributes": {
+                                    "text": "text",
+                                    "value": "type1"
+                                }
+                            },
+                            {
+                                "field": "type2",
+                                "attributes": {
+                                    "selected": "true",
+                                    "text": "url",
+                                    "value": "type2"
+                                }
+                            },
+                            {
+                                "field": "type3",
+                                "attributes": {
+                                    "text": "tel",
+                                    "value": "type3"
+                                }
+                            },
+                            {
+                                "field": "type4",
+                                "attributes": {
+                                    "text": "email",
+                                    "value": "type4"
+                                }
+                            },
+                            {
+                                "field": "type5",
+                                "attributes": {
+                                    "text": "checkbox",
+                                    "value": "type5"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "field": "inputLabelText",
+                        "type": "textfield",
+                        "label": "Digite o texto da label",
+                        "json-expose": true,
+                        "json-property": "inputLabelText"
+                    },
+                    {
+                        "field": "inputLabelColor",
+                        "type": "textfield",
+                        "label": "Escolha a cor da label",
+                        "json-expose": true,
+                        "json-property": "inputLabelColor"
+                    },
+                    {
+                        "field": "inputErrorText",
+                        "type": "textfield",
+                        "label": "Digite o texto da mensagem de erro",
+                        "json-expose": true,
+                        "json-property": "inputErrorText"
+                    },
+                    {
+                        "field": "inputColorError",
+                        "type": "textfield",
+                        "label": "Escolha a cor da mensagem de erro",
+                        "json-expose": true,
+                        "json-property": "inputColorError"
+                    },
+                    {
+                        "field": "inputPlaceholderText",
+                        "type": "textfield",
+                        "label": "Digite o texto do placeholder",
+                        "json-expose": true,
+                        "json-property": "inputPlaceholderText"
+                    },
+                    {
+                        "field": "inputBorderColor",
+                        "type": "textfield",
+                        "label": "Escolha a cor da borda do input",
+                        "json-expose": true,
+                        "json-property": "inputBorderColor"
+                    }
+                ]
+            },
+            {
+                "field": "birthdayLabelTitle",
+                "type": "textfield",
+                "label": "Digite o título da label",
+                "json-expose": true,
+                "json-property": "birthdayLabelTitle"
+            },
+            {
+                "field": "birthdayLabelDay",
+                "type": "textfield",
+                "label": "Digite o texto da label do primeiro select",
+                "json-expose": true,
+                "json-property": "birthdayLabelDay"
+            },
+            {
+                "field": "birthdayLabelMonth",
+                "type": "textfield",
+                "label": "Digite o texto da label do segundo select",
+                "json-expose": true,
+                "json-property": "birthdayLabelMonth"
+            },
+            {
+                "field": "birthdayLabelYear",
+                "type": "textfield",
+                "label": "Digite o texto da label do terceiro select",
+                "json-expose": true,
+                "json-property": "birthdayLabelYear"
+            },
+            {
+                "field": "birthdayLabelAge",
+                "type": "textfield",
+                "label": "Digite o texto da label",
+                "json-expose": true,
+                "json-property": "birthdayLabelAge"
+            },
+            {
+                "field": "birthdayLabelColor",
+                "type": "textfield",
+                "label": "Escolha a cor da label do select",
+                "json-expose": true,
+                "json-property": "birthdayLabelColor"
+            },
+            {
+                "field": "birthdayErrorText",
+                "type": "textfield",
+                "label": "Digite o texto da mensagem de erro",
+                "json-expose": true,
+                "json-property": "birthdayErrorText"
+            },
+            {
+                "field": "birthdayErrorColor",
+                "type": "textfield",
+                "label": "Escolha a cor da mensagem de erro",
+                "json-expose": true,
+                "json-property": "birthdayErrorColor"
+            },
+            {
+                "field": "birthdayBorderColor",
+                "type": "textfield",
+                "label": "Escolha a cor da borda do select",
+                "json-expose": true,
+                "json-property": "birthdayBorderColor"
+            },
+            {
+                "field": "checkboxLabelText",
+                "type": "textfield",
+                "label": "Digite o texto da label do checkbox",
+                "json-expose": true,
+                "json-property": "checkboxLabelText"
+            },
+            {
+                "field": "checkboxLabelColor",
+                "type": "textfield",
+                "label": "Escolha a cor da label do checkbox",
+                "json-expose": true,
+                "json-property": "checkboxLabelColor"
+            },
+            {
+                "field": "checkboxErrorText",
+                "type": "textfield",
+                "label": "Digite o texto da mensagem de erro do checkbox",
+                "json-expose": true,
+                "json-property": "checkboxErrorText"
+            },
+            {
+                "field": "checkboxColorError",
+                "type": "textfield",
+                "label": "Escolha a cor da mensagem de erro do checkbox",
+                "json-expose": true,
+                "json-property": "checkboxColorError"
+            },
+            {
+                "field": "checkboxBorderColor",
+                "type": "textfield",
+                "label": "Escolha a cor da borda do checkbox",
+                "json-expose": true,
+                "json-property": "checkboxBorderColor"
+            },
+            {
+                "field": "submitBtnTitle",
+                "type": "textfield",
+                "label": "Digite o texto do botão",
+                "json-expose": true,
+                "json-property": "submitBtnTitle"
+            },
+            {
+                "field": "submitBtnColor",
+                "type": "textfield",
+                "label": "Escolha a cor do botão",
+                "json-expose": true,
+                "json-property": "submitBtnColor"
+            },
+            {
+                "field": "submitColorText",
+                "type": "textfield",
+                "label": "Escolha a cor do texto do botão",
+                "json-expose": true,
+                "json-property": "submitColorText"
+            },
+            {
+                "field": "submitFirstIcon",
+                "type": "image",
+                "label": "Escolha o ícone a esquerda do texto do botão ",
+                "json-expose": true,
+                "json-property": "submitFirstIcon"
+            },
+            {
+                "field": "submitSecondIcon",
+                "type": "image",
+                "label": "Escolha o ícone a direita do texto do botão",
+                "json-expose": true,
+                "json-property": "submitSecondIcon"
+            }
+        ]
+    }
+}
