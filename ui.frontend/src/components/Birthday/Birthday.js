@@ -36,7 +36,7 @@ const Birthday = ({
     }  
       
     const calculateAge = async() =>{
-      getAge()       
+      getAge()
       ;
     }
     
@@ -48,6 +48,7 @@ const Birthday = ({
         age--;     
       }
       setAge(age)
+      localStorage.setItem("Birthday", dayOption + '/' + monthOption + '/' + yearOption);
       return age;
     } 
   
