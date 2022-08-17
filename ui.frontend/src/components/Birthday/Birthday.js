@@ -4,37 +4,56 @@ import { Result, BirthdayContainer, LabelContainer, DateContainer } from './Birt
 import Label from '../Micro/Label/MicroLabel';
 import ErrorMessage from "../Micro/ErrorMessage/ErrorMessage";
 
-const Birthday = ({ labelColor, labelTitle, labelMonth, labelDay, borderColor, labelYear, labelAge, register, errors }) => {
-  const [dayOption, setDayOption] = useState(0);
-  const [monthOption, setMonthOption] = useState(0);
-  const [yearOption, setYearOption] = useState(0);
-  const [age, setAge] = useState();
+const Birthday = ({ 
+  labelColor, 
+  labelTitle, 
+  labelMonth, 
+  labelDay, 
+  borderColor, 
+  labelYear, 
+  labelAge, 
+  register, 
+  errors,     
+  }) => {
+
+    const [dayOption, setDayOption] = useState(0);
+    const [monthOption, setMonthOption] = useState(0);
+    const [yearOption, setYearOption] = useState(0);
+    const [age, setAge] = useState(''); 
   
-  function changeDay(e) {
-    setDayOption(e.target.value);
-  }
-
-  function changeMonth(e) {
-    setMonthOption(e.target.value);
-  }
-
-  function changeYear(e) {
-    setYearOption(e.target.value)    
-  }
-
-  function calculaAge() {
-    getAge()
-  }
-  function getAge() {
-    var today = new Date();    
-    var age = today.getFullYear() - yearOption;
-    var m = today.getMonth() - monthOption;
-    if (m < 0 || (m === 0 && today.getDate() < dayOption)) {
-      age--;     
+      function changeDay(e) {
+      setDayOption(e.target.value);
     }
-    setAge(age);
-  } 
-
+  
+    function changeMonth(e) {
+      setMonthOption(e.target.value);
+    }
+  
+    function changeYear(e) {
+      setYearOption(e.target.value)        
+    }  
+      
+    const calculateAge = async() =>{
+      getAge()       
+      ;
+    }
+    
+    function getAge() {
+      var today = new Date();    
+      var age = today.getFullYear() - yearOption;
+      var m = today.getMonth() - monthOption;
+      if (m < 0 || (m === 0 && today.getDate() < dayOption)) {
+        age--;     
+      }
+      setAge(age)
+      return age;
+    } 
+  
+    console.log(dayOption)
+    console.log(monthOption)
+    console.log(yearOption)
+    console.log(age)     
+   
   return (
     <BirthdayContainer>
       <LabelContainer>
@@ -48,11 +67,11 @@ const Birthday = ({ labelColor, labelTitle, labelMonth, labelDay, borderColor, l
         </div>
         <div>
           <Label labelColor={labelColor} id="inputs" label={labelMonth}/>
-          <Select id="Month" borderColor={borderColor} onInput={changeMonth} />
+          <Select id="Month" borderColor={borderColor} onInput={changeMonth}/>
         </div>
         <div>
           <Label labelColor={labelColor} id="inputs" label={labelYear}/>
-          <Select id="Year" borderColor={borderColor} onInput={changeYear} onBlur={calculaAge}  />
+          <Select id="Year" borderColor={borderColor} onInput={changeYear} onBlur={calculateAge} />
         </div>
         <div>
           <Label labelColor={labelColor} id="inputs" label={labelAge} />
