@@ -23,6 +23,8 @@ import MeuComponente from "./MeuComponente";
 import "./Tabs/Tabs";
 import "./Certificates/Certificates"
 import "./Basic/Basic"
+import "./Social/Social"
+
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 
