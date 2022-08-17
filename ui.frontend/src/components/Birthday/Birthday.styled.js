@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { toRem } from "../../utils/convertToRem";
 
 export const Result = styled.input`
-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   height: 2.5em;
   font-family: "Nunito", sans-serif;
@@ -27,14 +27,18 @@ export const BirthdayContainer = styled.div`
 `;
 
 export const LabelContainer = styled.div`
-display: flex;
-gap: 1.3rem;
-margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1.3rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const DateContainer = styled.div`
-display: grid;
-grid-template-columns: 21% 21% 21% auto;  
-gap: 1.375rem;
-grid-row: 2 / 3;
-`
+  display: grid;
+  grid-template-columns: 21% 21% 21% auto;  
+  gap: 1.375rem;
+  grid-row: 2 / 3; 
+  @media (max-width: 768px) {
+    grid-template-columns: auto 50%;    
+    
+  }
+`;
