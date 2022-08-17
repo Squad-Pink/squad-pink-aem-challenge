@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { toRem } from "../../utils/convertToRem";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const TabsContainer = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ export const NavTabs = styled.ul`
   border-bottom: ${toRem(1)} solid #aaaaaa; 
 `;
 
-export const NavLinkStyled = styled(NavLink)`
+export const NavLinkStyled = styled(Link)`
   width: 50% !important;  
   list-style: none;
   text-align: center;
@@ -38,6 +38,6 @@ export const NavLinkStyled = styled(NavLink)`
     color: ${(props) => props.titleActiveColor}!important;
     &:visited, &:link{
     color: #111111;    
+  }   
   } 
-  }
 `;
