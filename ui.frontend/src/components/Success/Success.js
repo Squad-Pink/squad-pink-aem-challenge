@@ -6,7 +6,7 @@ import {
   ReturnContainer,
 } from "./Success.styled";
 import Button from "../Micro/Button/Button";
-//import { MapTo } from "@adobe/aem-react-editable-components";
+import { MapTo } from "@adobe/aem-react-editable-components";
 
 const Success = ({
   submitBtnTitle,
@@ -76,49 +76,44 @@ const Success = ({
     }
   }, []);
 
-  /*const handleClick = () => {
-    setSocialContainer(false);
-    setCertificateContainer(false);
-    localStorage.clear();
-    navigate("/basic", { replace: true });
-  };*/
-
   return (
-    <SuccessContainer>
-      <Text
-        textColor={textColor}
-        textP='Your data has been sent successfully!'
-      />
-      <Text textColor={textColor} TextP={fullName} />
-      <Text textColor={textColor} TextP={nickname} />
-      <Text textColor={textColor} TextP={email} />
-      <Text textColor={textColor} TextP={phone} />
-      <Text textColor={textColor} TextP={birthday} />
-      <Text textColor={textColor} TextP={linkedIn} />
-      <Text textColor={textColor} TextP={gitHub} />
-      <CertificatesContainer>
-        <Text textColor={textColor} textP={"Certificates: "} />
+    <div class='formContainer'>
+      <SuccessContainer>
         <Text
           textColor={textColor}
-          textP={certificates.replace(/\,/gs, "\n")}
+          TextP='Your data has been sent successfully!'
         />
-      </CertificatesContainer>
-      <Text textColor={textColor} TextP={teamName} />
-      <Text textColor={textColor} TextP={institution} />
-      <Text textColor={textColor} TextP={graduation} />
-      <ReturnContainer>
-        <Button
-          type='submit'
-          textButton={submitBtnTitle}
-          colorButton={submitBtnColor}
-          colorTextButton={submitColorText}
-          src={submitFirstIcon}
-          src1={submitSecondIcon}
-          id='Submit'
-        />
-      </ReturnContainer>
-    </SuccessContainer>
+        <Text textColor={textColor} TextP={fullName} />
+        <Text textColor={textColor} TextP={nickname} />
+        <Text textColor={textColor} TextP={email} />
+        <Text textColor={textColor} TextP={phone} />
+        <Text textColor={textColor} TextP={birthday} />
+        <Text textColor={textColor} TextP={linkedIn} />
+        <Text textColor={textColor} TextP={gitHub} />
+        <CertificatesContainer>
+          <Text textColor={textColor} textP={"Certificates: "} />
+          <Text
+            textColor={textColor}
+            textP={certificates.replace(/\,/gs, "\n")}
+          />
+        </CertificatesContainer>
+        <Text textColor={textColor} TextP={teamName} />
+        <Text textColor={textColor} TextP={institution} />
+        <Text textColor={textColor} TextP={graduation} />
+        <ReturnContainer>
+          <Button
+            type='submit'
+            textButton={submitBtnTitle}
+            colorButton={submitBtnColor}
+            colorTextButton={submitColorText}
+            src={submitFirstIcon.src}
+            src1={submitSecondIcon.src}
+            id='Submit'
+          />
+        </ReturnContainer>
+      </SuccessContainer>
+    </div>
   );
 };
 
-export default Success;
+export default MapTo("reactapp/components/success")(Success);
