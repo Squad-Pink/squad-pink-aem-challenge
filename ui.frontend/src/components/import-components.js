@@ -24,7 +24,6 @@ import "./Tabs/Tabs";
 import "./Certificates/Certificates"
 import "./Basic/Basic"
 
-
 import { MapTo } from "@adobe/aem-react-editable-components";
 
 import { CarouselV1IsEmptyFn } from "@adobe/aem-core-components-react-spa/dist/isEmptyFunctions";
