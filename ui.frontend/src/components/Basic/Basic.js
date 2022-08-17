@@ -3,7 +3,7 @@ import { InputBlock } from "../InputBlock/InputBlock";
 import  Birthday  from "../Birthday/Birthday"
 import Button from "../Micro/Button/Button";
 import Checkbox from "../Checkbox/Checkbox"
-import { FormBasic, InputFormGroup } from "./Basic.styled";
+import { FormBasic, InputFormGroup, BirthdayDiv, ButtonDiv } from "./Basic.styled";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
@@ -78,8 +78,8 @@ const Basic = ({
             },
             index
           ) => (
-            <InputFormGroup key={index}>
-              <InputBlock
+            <InputFormGroup key={index}  className={inputLabelText}>
+              <InputBlock   
                 register={register}
                 errors={errors}
                 type={TYPES[inputType]}
@@ -95,6 +95,7 @@ const Basic = ({
           )
         )}
 
+<BirthdayDiv>
         <Birthday 
         labelTitle={birthdayLabelTitle}
         labelDay={birthdayLabelDay}
@@ -108,6 +109,7 @@ const Basic = ({
         register={register}
         errors={errors}
         />
+</BirthdayDiv>
 
         <Checkbox
           register={register}
@@ -120,6 +122,7 @@ const Basic = ({
           borderColor={checkboxBorderColor}
         />
 
+      <ButtonDiv>
         <Button
           type='submit'
           textButton={submitBtnTitle}
@@ -129,6 +132,7 @@ const Basic = ({
           src1={submitSecondIcon.src}
           id='Submit'
         />
+      </ButtonDiv>
 
     </FormBasic>
   );
