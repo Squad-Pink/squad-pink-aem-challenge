@@ -33,7 +33,7 @@ const Certificates = ({
 
     const onSubmit = (data) => {
         saveLocal(data);
-        history.push("/content/reactapp/us/en/home/success");
+        history.push("/content/reactapp/us/en/home/sucess");
     }
 
     const saveLocal = (value) => {
