@@ -11,6 +11,9 @@ const FormsTitle = styled.h1`
     line-height: ${toRem(24)};
     color: #111111;
     justify-content: center;
+    @media (max-width: 420px) {
+        line-height: ${toRem(22)};
+    }
 `
 
 const SignUpTitle = styled.h2`
@@ -35,6 +38,11 @@ const TabTitle = styled.h3`
     line-height: ${toRem(48)};
     color: ${(props) => props.titleColor};
     justify-content: center;
+
+    @media (max-width: 420px) {
+        font-size: ${toRem(33)};
+        line-height: ${toRem(40)};
+    }
 `
 
 const TitleStyled = styled.h4`

@@ -6,17 +6,26 @@ export const TabsContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-family: "Nunito", sans-serif;
+  padding: 0 3rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
 `;
 
 export const TitleContainer = styled.div`
-margin-top:${toRem(40)};
-margin-bottom: ${toRem(33)};
-margin-left: ${toRem(67)};
+  margin-top:${toRem(40)};
+  margin-bottom: ${toRem(33)};
+
+  @media (max-width: 420px) {
+    margin-top:${toRem(30)};
+    margin-bottom: ${toRem(23)};
+  }
 `;
 
 export const NavTabs = styled.ul`
-  width: 90%;
-  margin: 0 ${toRem(67)} ${toRem(32)};
+  width: 100%;
+  margin:  auto;
   display: flex;
   border-bottom: ${toRem(1)} solid #aaaaaa; 
 `;
@@ -43,17 +52,22 @@ export const NavLinkStyled = styled(Link)`
 `;
 
 export const Container = styled.div`
-display: flex;
-background: white;
-border-radius: ${toRem(20)} ${toRem(20)} 0 0;
-width: ${toRem(617)};
-margin: auto;
-height: ${toRem(186)};
-margin-top: ${toRem(69)};
-flex-direction: column;  
-padding: auto;
-@media (max-width: 768px) {
-  width: 100%;
-  margin-top: ${toRem(30)
-}}
+  display: flex;
+  background: white;
+  border-radius: ${toRem(20)} ${toRem(20)} 0 0;
+  width: ${toRem(617)};
+  margin: auto;
+  height: ${toRem(186)};
+  margin-top: ${toRem(69)};
+  flex-direction: column;  
+  padding: auto;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: ${toRem(10)
+  }}
+  @media (max-width: 420px) {
+    width: 100%;
+    margin-top: ${toRem(0)};
+    height: ${toRem(150)};
+  }
 `;

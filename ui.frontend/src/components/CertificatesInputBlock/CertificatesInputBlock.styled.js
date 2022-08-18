@@ -66,6 +66,7 @@ export const MoreBtnContainer = styled.div`
     display: grid;
     justify-items: end;
     row-gap: ${toRem(4)};
+    text-align: right;
 `;
 
 export const CertificatesErrorMessage = styled.p`
@@ -83,5 +84,9 @@ export const CertificatesErrorMessage = styled.p`
     opacity: 1;
     visibility: visible;    
     }
+}
+@media (max-width: 768px) {
+        font-size: ${toRem(13)};
+        line-height: ${toRem(13)};
     }
 `;

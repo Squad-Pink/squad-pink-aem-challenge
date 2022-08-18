@@ -2,16 +2,14 @@ import styled from "styled-components";
 import { toRem } from "../../utils/convertToRem";
 
 export const CertificatesForm = styled.form`
-    margin-right: ${toRem(55)};
-    margin-left: ${toRem(47)};
-    max-width: ${toRem(617)};
+    width: 100%;
+    padding: 0 3rem;
     margin: auto;
     display: grid;
     grid-template-columns: 22.5% 77.5%;
     grid-template-rows: auto auto auto auto;
     @media (max-width: 768px) {
-        margin-right: 1.5rem;
-        margin-left: 1.5rem;
+        padding: 0 1.5rem;
     }
 `;
 
@@ -36,16 +34,16 @@ export const SubmitButtonContainer = styled.div`
 `;
 
 export const Container = styled.div`
-display: flex;
-background: white;
-border-radius: 0 0 ${toRem(20)} ${toRem(20)}  ;
-width: ${toRem(617)};
-margin: auto;
-max-height: ${toRem(763)};
-flex-direction: column;  
-padding: auto;
-@media (max-width: 768px) {
-  width: 100%;
-  margin-top: ${toRem(30)
-}}
+    display: flex;
+    background: white;
+    border-radius: 0 0 ${toRem(20)} ${toRem(20)}  ;
+    width: ${toRem(617)};
+    margin: auto;
+    max-height: ${toRem(763)};
+    flex-direction: column;  
+    padding: auto;
+    @media (max-width: 768px) {
+    width: 100%;
+    margin-top: ${toRem(5)
+    }}
 `;

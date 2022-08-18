@@ -3,15 +3,16 @@ import { toRem } from "../../utils/convertToRem";
 
 export const FormBasic = styled.form`
    display: grid;
-   max-width: ${toRem(717)} ;
-   margin: auto;
-   padding: auto;
-   grid-template-columns: 70% 30%;
-   column-gap: 2rem;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 3rem ;
+   grid-template-columns: 67% 30%;
+   column-gap: 1rem;
 
    @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    padding: 0 1.5rem ;
   }
 
 `;
@@ -56,6 +57,20 @@ export const ButtonDiv = styled.div`
     margin-top: 6rem;
 
     @media (max-width: 768px) {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
+    }
+`;
+
+export const Container = styled.div`
+    display: flex;
+    background: white;
+    border-radius: 0 0 ${toRem(20)} ${toRem(20)}  ;
+    width: ${toRem(617)};
+    margin: auto;
+    height: ${toRem(553)};
+    flex-direction: column;  
+    padding: auto;
+    @media (max-width: 768px) {
+        width: 100%;
     }
 `;

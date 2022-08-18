@@ -38,6 +38,12 @@ body {
   background-color: #ECEEF2;
 }
 
+@media (max-width: 768px) {
+  body{
+    background-color: #ffffff;
+  }
+}
+
 h1,
 h2,
 h3,

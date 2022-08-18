@@ -11,9 +11,9 @@ import * as yup from "yup";
 
 const schema = yup.object({
     'Certificates':yup.string().required(),
-    'Team Name*':yup.string().required(),
-    'Institution*':yup.string().required(),
-    'Graduation':yup.string().required(),
+    'Team Name *':yup.string().required(),
+    'Institution *':yup.string().required(),
+    'Graduation *':yup.string().required(),
 }).required()
 
 const Certificates = ({    
