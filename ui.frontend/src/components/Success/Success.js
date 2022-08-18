@@ -4,6 +4,7 @@ import {
   SuccessContainer,
   CertificatesContainer,
   ReturnContainer,
+  Container,
 } from "./Success.styled";
 import Button from "../Micro/Button/Button";
 import { MapTo } from "@adobe/aem-react-editable-components";
@@ -27,6 +28,7 @@ const Success = ({
   const [teamName, setTeamName] = useState("");
   const [institution, setInstitution] = useState("");
   const [graduation, setGraduation] = useState("");
+  const regex = /[,"]/g ;
 
   useEffect(() => {
     const fullName = `Full Name: ${localStorage.getItem("Full Name *")}`;
@@ -41,42 +43,43 @@ const Success = ({
     const institution = `Institution: ${localStorage.getItem("Institution *")}`;
     const graduation = `Graduation: ${localStorage.getItem("Graduation *")}`;
 
-    if (localStorage.getItem("Full Name *") !== null) {
+    if (localStorage.getItem("Full Name *")) {
       setFullName(fullName);
     }
-    if (localStorage.getItem("Nickname") !== null) {
+    if (localStorage.getItem("Nickname")) {
       setNickname(nickname);
     }
-    if (localStorage.getItem("Email *") !== null) {
+    if (localStorage.getItem("Email *")) {
       setEmail(email);
     }
-    if (localStorage.getItem("Phone") !== null) {
+    if (localStorage.getItem("Phone")) {
       setPhone(phone);
     }
-    if (localStorage.getItem("Birthday *") !== null) {
+    if (localStorage.getItem("Birthday *")) {
       setBirthday(birthday);
     }
-    if (localStorage.getItem("GitHub *") !== null) {
+    if (localStorage.getItem("GitHub *")) {
       setGitHub(gitHub);
     }
-    if (localStorage.getItem("LinkedIn") !== null) {
+    if (localStorage.getItem("LinkedIn")) {
       setLinkedIn(linkedIn);
     }
-    if (localStorage.getItem("certificates") !== null) {
+    if (localStorage.getItem("certificates")) {
       setCertificates(certificates);
     }
-    if (localStorage.getItem("Team Name *") !== null) {
+    if (localStorage.getItem("Team Name *")) {
       setTeamName(teamName);
     }
-    if (localStorage.getItem("Institution *") !== null) {
+    if (localStorage.getItem("Institution *")) {
       setInstitution(institution);
     }
-    if (localStorage.getItem("Graduation *") !== null) {
+    if (localStorage.getItem("Graduation *")) {
       setGraduation(graduation);
     }
   }, []);
 
   return (
+    <Container>
     <div class='formContainer'>
       <SuccessContainer>
         <Text
@@ -94,7 +97,7 @@ const Success = ({
           <Text textColor={textColor} TextP={"Certificates: "} />
           <Text
             textColor={textColor}
-            TextP={certificates.replace(/\,/g, "\n")}
+            TextP={certificates.replace(regex, '\n' )}
           />
         </CertificatesContainer>
         <Text textColor={textColor} TextP={teamName} />
@@ -113,6 +116,7 @@ const Success = ({
         </ReturnContainer>
       </SuccessContainer>
     </div>
+    </Container>
   );
 };
 
