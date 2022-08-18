@@ -6,6 +6,7 @@ import { MapTo } from "@adobe/aem-react-editable-components";
 import PropTypes from "prop-types";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import {useHistory} from "react-router-dom"
 
 import { FormContent, InputFormGroup, ButtonFormGroup, Container } from "./Social.styled";
 
@@ -30,10 +31,13 @@ const Social = ({
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
+  const history = useHistory();
+
   const onSubmit = (data) => {
     saveLocal(data);
-    console.log(data)
+    history.push("/content/reactapp/us/en/home/certificates");
   }
+  
   const saveLocal = (value) => {
     let localValues = Object.entries(value);
     for (let i = 0; i < localValues.length; i++) {
