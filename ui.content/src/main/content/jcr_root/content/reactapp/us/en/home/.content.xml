@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2022-06-28T14:28:27.696-03:00"
+        cq:lastModified="{Date}2022-08-17T20:36:10.346-03:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/reactapp/settings/wcm/templates/spa-page-template"
         jcr:primaryType="cq:PageContent"
@@ -14,6 +14,91 @@
             <responsivegrid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
+                <form_basic
+                    jcr:created="{Date}2022-08-17T13:49:28.474-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-08-17T20:36:10.340-03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="reactapp/components/form-basic"
+                    birthdayBorderColor="#AAAAAA"
+                    birthdayErrorColor="#FF0000"
+                    birthdayErrorText="Please enter your Age"
+                    birthdayLabelAge="Age"
+                    birthdayLabelColor="#767676"
+                    birthdayLabelDay="Day"
+                    birthdayLabelMonth="Month"
+                    birthdayLabelTitle="Birthday *"
+                    birthdayLabelYear="Year"
+                    checkboxBorderColor="#AAAAAA"
+                    checkboxColorError="#FF0000"
+                    checkboxErrorText="Please confirm the terms"
+                    checkboxLabelColor="#111111"
+                    checkboxLabelText="I accept the terms and privacy"
+                    submitBtnColor="#074EE8"
+                    submitBtnTitle="Next"
+                    submitColorText="#FFFFFF">
+                    <submitFirstIcon
+                        jcr:lastModified="{Date}2022-08-17T20:36:10.340-03:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/image/v2/image"
+                        fileReference="/content/dam/reactapp/min-default.png"/>
+                    <submitSecondIcon
+                        jcr:lastModified="{Date}2022-08-17T20:36:10.340-03:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="core/wcm/components/image/v2/image"
+                        fileReference="/content/dam/reactapp/arrowIcon.svg"/>
+                    <formBasic jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            inputBorderColor="#AAAAAA"
+                            inputColorError="#FF0000"
+                            inputErrorText="Please enter your Name"
+                            inputLabelColor="#767676"
+                            inputLabelText="Full Name *"
+                            inputPlaceholderText="Foo Bar"
+                            inputType="type1"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            inputBorderColor="#AAAAAA"
+                            inputLabelColor="#767676"
+                            inputLabelText="Nickname"
+                            inputPlaceholderText="Juanito"
+                            inputType="type1"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            inputBorderColor="#AAAAAA"
+                            inputColorError="#FF0000"
+                            inputErrorText="Please enter your Email"
+                            inputLabelColor="#767676"
+                            inputLabelText="Email *"
+                            inputPlaceholderText="foo@bar.com"
+                            inputType="type4"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            inputBorderColor="#AAAAAA"
+                            inputLabelColor="#767676"
+                            inputLabelText="Phone"
+                            inputPlaceholderText="(83) 00000-0000"
+                            inputType="type3"/>
+                    </formBasic>
+                </form_basic>
+                <success
+                    jcr:created="{Date}2022-08-17T19:39:23.915-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-08-17T19:39:23.915-03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="reactapp/components/success"/>
+                <success_293137278
+                    jcr:created="{Date}2022-08-17T19:40:03.596-03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-08-17T19:40:03.596-03:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="reactapp/components/success"/>
                 <xx_xxx
                     jcr:created="{Date}2022-03-14T12:43:48.774-03:00"
                     jcr:createdBy="admin"
@@ -50,4 +135,6 @@
             </responsivegrid>
         </root>
     </jcr:content>
+    <social/>
+    <certificates/>
 </jcr:root>
