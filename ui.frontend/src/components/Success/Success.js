@@ -36,7 +36,7 @@ const Success = ({
     const birthday = `Birthday: ${localStorage.getItem("Birthday *")}`;
     const linkedIn = `LinkedIn: ${localStorage.getItem("LinkedIn")}`;
     const gitHub = `GitHub: ${localStorage.getItem("GitHub *")}`;
-    const certificates = `${JSON.parse(localStorage.getItem("Certificates"))}`;
+    const certificates = `${JSON.parse(localStorage.getItem("certificates"))}`;
     const teamName = `TeamName: ${localStorage.getItem("Team Name *")}`;
     const institution = `Institution: ${localStorage.getItem("Institution *")}`;
     const graduation = `Graduation: ${localStorage.getItem("Graduation *")}`;
@@ -62,7 +62,7 @@ const Success = ({
     if (localStorage.getItem("LinkedIn") !== null) {
       setLinkedIn(linkedIn);
     }
-    if (localStorage.getItem("Certificates") !== null) {
+    if (localStorage.getItem("certificates") !== null) {
       setCertificates(certificates);
     }
     if (localStorage.getItem("Team Name *") !== null) {
