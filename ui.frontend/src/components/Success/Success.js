@@ -8,6 +8,7 @@ import {
 } from "./Success.styled";
 import Button from "../Micro/Button/Button";
 import { MapTo } from "@adobe/aem-react-editable-components";
+import {useHistory} from "react-router-dom"
 
 const Success = ({
   submitBtnTitle,
@@ -29,6 +30,7 @@ const Success = ({
   const [institution, setInstitution] = useState("");
   const [graduation, setGraduation] = useState("");
   const regex = /[,"]/g ;
+  const history = useHistory();
 
   useEffect(() => {
     const fullName = `Full Name: ${localStorage.getItem("Full Name *")}`;
@@ -78,6 +80,11 @@ const Success = ({
     }
   }, []);
 
+  const onSubmit = () => {
+    localStorage.clear();
+    history.push("/content/reactapp/us/en/home");
+  }
+
   return (
     <Container>
     <div class='formContainer'>
@@ -112,6 +119,7 @@ const Success = ({
             src={submitFirstIcon.src}
             src1={submitSecondIcon.src}
             id='Submit'
+            onClick={onSubmit}
           />
         </ReturnContainer>
       </SuccessContainer>

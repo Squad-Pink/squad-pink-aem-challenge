@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2022-08-17T20:36:33.189-03:00"
+        cq:lastModified="{Date}2022-08-18T16:23:10.167-03:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/reactapp/settings/wcm/templates/spa-page-template"
         jcr:primaryType="cq:PageContent"
@@ -21,7 +21,7 @@
                 <social_container_1043520473
                     jcr:created="{Date}2022-08-17T19:38:38.222-03:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2022-08-17T20:36:33.185-03:00"
+                    jcr:lastModified="{Date}2022-08-18T16:23:10.163-03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="reactapp/components/social-container"
@@ -29,13 +29,13 @@
                     submitBtnTitle="Next"
                     submitColorText="#FFFFFF">
                     <submitFirstIcon
-                        jcr:lastModified="{Date}2022-08-17T20:36:33.185-03:00"
+                        jcr:lastModified="{Date}2022-08-18T16:23:10.163-03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="core/wcm/components/image/v2/image"
                         fileReference="/content/dam/reactapp/min-default.png"/>
                     <submitSecondIcon
-                        jcr:lastModified="{Date}2022-08-17T20:36:33.185-03:00"
+                        jcr:lastModified="{Date}2022-08-18T16:23:10.163-03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="core/wcm/components/image/v2/image"

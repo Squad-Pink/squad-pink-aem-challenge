@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2022-08-17T22:18:00.651-03:00"
+        cq:lastModified="{Date}2022-08-18T10:30:25.553-03:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/reactapp/settings/wcm/templates/spa-page-template"
         jcr:primaryType="cq:PageContent"
@@ -21,7 +21,7 @@
                 <certificates_contain
                     jcr:created="{Date}2022-08-17T20:19:04.053-03:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2022-08-17T22:18:00.636-03:00"
+                    jcr:lastModified="{Date}2022-08-18T10:30:25.536-03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="reactapp/components/certificates-container"
@@ -29,29 +29,29 @@
                     submitBtnTitle="Finish"
                     submitColorText="#FFFFFF">
                     <certificatesSplitFirstIcon
-                        jcr:lastModified="{Date}2022-08-17T22:18:00.636-03:00"
+                        jcr:lastModified="{Date}2022-08-18T10:30:25.536-03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"/>
                     <certificatesSplitSecondIcon
-                        jcr:lastModified="{Date}2022-08-17T22:18:00.636-03:00"
+                        jcr:lastModified="{Date}2022-08-18T10:30:25.536-03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"/>
                     <certificatesBtnFirstIcon
-                        jcr:lastModified="{Date}2022-08-17T22:18:00.636-03:00"
+                        jcr:lastModified="{Date}2022-08-18T10:30:25.536-03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"/>
                     <certificatesBtnSecondIcon
-                        jcr:lastModified="{Date}2022-08-17T22:18:00.636-03:00"
+                        jcr:lastModified="{Date}2022-08-18T10:30:25.536-03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"/>
                     <submitFirstIcon
-                        jcr:lastModified="{Date}2022-08-17T22:18:00.636-03:00"
+                        jcr:lastModified="{Date}2022-08-18T10:30:25.536-03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="core/wcm/components/image/v2/image"
                         fileReference="/content/dam/reactapp/checkIcon.svg"/>
                     <submitSecondIcon
-                        jcr:lastModified="{Date}2022-08-17T22:18:00.636-03:00"
+                        jcr:lastModified="{Date}2022-08-18T10:30:25.536-03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="core/wcm/components/image/v2/image"

@@ -8,6 +8,7 @@ import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 import {yupResolver} from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import {useHistory} from "react-router-dom"
 
 const schema = yup.object({
     'Certificates':yup.string().required(),
@@ -28,7 +29,12 @@ const Certificates = ({
 
     const { register, handleSubmit, formState:{ errors } } = useForm({resolver: yupResolver(schema)});
 
-    const onSubmit = (data) => saveLocal(data)
+    const history = useHistory();
+
+    const onSubmit = (data) => {
+        saveLocal(data);
+        history.push("/content/reactapp/us/en/home/sucess");
+    }
 
     const saveLocal = (value) => {
         let localValues = Object.entries(value)
