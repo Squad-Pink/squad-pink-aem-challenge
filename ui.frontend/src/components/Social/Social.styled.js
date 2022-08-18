@@ -21,4 +21,19 @@ const ButtonFormGroup = styled.div`
   margin: 5% 0 0 0;
 `;
 
+export const Container = styled.div`
+display: flex;
+background: white;
+border-radius: 0 0 ${toRem(20)} ${toRem(20)}  ;
+width: ${toRem(617)};
+margin: auto;
+max-height: ${toRem(763)};
+flex-direction: column;  
+padding: auto;
+@media (max-width: 768px) {
+  width: 100%;
+  margin-top: ${toRem(30)
+}}
+`;
+
 export { FormContent, InputFormGroup, ButtonFormGroup };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import Button from "../Micro/Button/Button";
-import { CertificatesForm, CertificatesInput, DataInputsContainer, SubmitButtonContainer } from "./Certificates.styled";
+import { CertificatesForm, CertificatesInput, DataInputsContainer, SubmitButtonContainer, Container } from "./Certificates.styled";
 import { InputBlock } from "../InputBlock/InputBlock"
 import CertificatesInputBlock from "../CertificatesInputBlock/CertificatesInputBlock";
 import PropTypes from "prop-types";
@@ -16,7 +16,7 @@ const schema = yup.object({
     'Graduation':yup.string().required(),
 }).required()
 
-const Certificates = ({
+const Certificates = ({    
     certificatesContainer,
     dataCertificatesContainer,
     submitBtnTitle,
@@ -55,6 +55,7 @@ const Certificates = ({
   
    
     return (
+        <Container>
         <CertificatesForm onSubmit={handleSubmit(onSubmit)}>
             {certificatesContainer.map(({
                 certificatesInputType,
@@ -136,6 +137,7 @@ const Certificates = ({
                 />
             </SubmitButtonContainer>
         </CertificatesForm>
+        </Container>
     )
 }
 Certificates.defaultProps = {

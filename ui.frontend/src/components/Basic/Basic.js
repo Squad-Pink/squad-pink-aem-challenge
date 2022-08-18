@@ -3,7 +3,7 @@ import { InputBlock } from "../InputBlock/InputBlock";
 import  Birthday  from "../Birthday/Birthday"
 import Button from "../Micro/Button/Button";
 import Checkbox from "../Checkbox/Checkbox"
-import { FormBasic, InputFormGroup, BirthdayDiv, ButtonDiv } from "./Basic.styled";
+import { FormBasic, InputFormGroup, BirthdayDiv, ButtonDiv, Container } from "./Basic.styled";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
@@ -64,6 +64,7 @@ const Basic = ({
       };
 
   return (
+    <Container>
     <FormBasic onSubmit={handleSubmit(onSubmit)}>
          {formBasic.map(
           (
@@ -135,6 +136,7 @@ const Basic = ({
       </ButtonDiv>
 
     </FormBasic>
+    </Container>
   );
 };
 

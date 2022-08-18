@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-import { FormContent, InputFormGroup, ButtonFormGroup } from "./Social.styled";
+import { FormContent, InputFormGroup, ButtonFormGroup, Container } from "./Social.styled";
 
 const schema = yup
   .object({
@@ -56,6 +56,7 @@ const Social = ({
     type5: "checkbox",
   };
   return (
+    <Container>
     <div className='formContainer'>
       <FormContent onSubmit={handleSubmit(onSubmit)}>
         {socialContainer.map(
@@ -98,9 +99,11 @@ const Social = ({
             id='Submit'
           />
         </ButtonFormGroup>
-      </FormContent>
+      </FormContent>      
     </div>
+    </Container>
   );
+  
 };
 
 Social.defaultProps = {

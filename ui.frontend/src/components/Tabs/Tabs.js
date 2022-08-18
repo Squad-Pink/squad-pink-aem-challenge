@@ -1,6 +1,6 @@
 import React,{ useState } from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
-import { TabsContainer, NavTabs, NavLinkStyled, TitleContainer } from "./Tabs.styled";
+import { TabsContainer, NavTabs, NavLinkStyled, TitleContainer, Container } from "./Tabs.styled";
 import Title from "../Micro/Title/Title";
 
 const Tabs = (props) => {
@@ -21,6 +21,7 @@ const Tabs = (props) => {
 
       console.log(activeTab)
     return (
+        <Container>
         <TabsContainer>
             <TitleContainer>
             <Title type="h2" title={props.pageTitle} titleColor={props.pageTitleColor} />
@@ -55,6 +56,7 @@ const Tabs = (props) => {
                 </NavLinkStyled>                
             </NavTabs>
         </TabsContainer>
+        </Container>
     );
 };
 export default MapTo("reactapp/components/tabs-nav")(Tabs);
