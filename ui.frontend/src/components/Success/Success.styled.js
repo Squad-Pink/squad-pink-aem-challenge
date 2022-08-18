@@ -4,6 +4,7 @@ import { toRem } from "../../utils/convertToRem";
 const SuccessContainer = styled.div`
   padding: 0 3.5rem;
   width: 100%;
+  margin-top: -8.5rem;
   @media (max-width: 768px) {
     padding: 0 1.5rem;
   }
@@ -14,7 +15,7 @@ const ReturnContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
-  margin-top: 7rem;
+  margin-top: 15rem;
 `;
 
 const CertificatesContainer = styled.div`

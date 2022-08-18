@@ -4,7 +4,7 @@ import { TabsContainer, NavTabs, NavLinkStyled, TitleContainer, Container } from
 import Title from "../Micro/Title/Title";
 import { useLocation } from "react-router-dom";
 
-const Tabs = (props, {tab1, tab2,tab3}) => {
+const Tabs = (props, {tab1, tab2,tab3, tab4}) => {
 
     const location = useLocation();
     
@@ -17,12 +17,15 @@ const Tabs = (props, {tab1, tab2,tab3}) => {
         if(location.pathname === "/content/reactapp/us/en/home/certificates") {
             tab3 = 'active';
         }
+        if(location.pathname === "/content/reactapp/us/en/home/sucess") {
+            tab4 = 'success';
+        }
         
     
     console.log(tab1, tab2,tab3)
     return (
-        <Container>
-        <TabsContainer>
+        <Container >
+        <TabsContainer className={tab4}>
             <TitleContainer>
             <Title type="h2" title={props.pageTitle} titleColor={props.pageTitleColor} />
             </TitleContainer>

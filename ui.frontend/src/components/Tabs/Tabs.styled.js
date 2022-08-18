@@ -8,6 +8,10 @@ export const TabsContainer = styled.div`
   font-family: "Nunito", sans-serif;
   padding: 0 3rem;
 
+  &.success {
+    display: none;
+  }
+
   @media (max-width: 768px) {
     padding: 0 1.5rem;
   }
