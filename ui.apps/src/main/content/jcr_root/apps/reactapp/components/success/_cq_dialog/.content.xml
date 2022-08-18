@@ -1,37 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
- |  ***********************************************************************
- |  React App CONFIDENTIAL
- |  ___________________
- |
- |  Copyright 2022 React App
- |  All Rights Reserved.
- |
- |  NOTICE:  All information contained herein is, and remains the property
- |  of React App and its suppliers, if any. The intellectual and
- |  technical concepts contained herein are proprietary to React App
- |  and its suppliers and are protected by trade secret or copyright law.
- |  Dissemination of this information or reproduction of this material
- |  is strictly forbidden unless prior written permission is obtained
- |  from React App.
- |  ***********************************************************************
--->
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="nt:unstructured" jcr:title="Success" sling:resourceType="cq/gui/components/authoring/dialog">
-   <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
-      <layout jcr:primaryType="nt:unstructured" margin="{Boolean}false" sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
-      <items jcr:primaryType="nt:unstructured">
-         <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
-            <items jcr:primaryType="nt:unstructured">
-               <textColor cq-msm-lockable="./textColor" fieldLabel="Escolha a cor do texto" jcr:primaryType="nt:unstructured" name="./textColor" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
-               <submitBtnTitle cq-msm-lockable="./submitBtnTitle" fieldLabel="Digite o texto do botão" jcr:primaryType="nt:unstructured" name="./submitBtnTitle" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" />
-               <submitBtnColor cq-msm-lockable="./submitBtnColor" fieldLabel="Escolha a cor do botão" jcr:primaryType="nt:unstructured" name="./submitBtnColor" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
-               <submitColorText cq-msm-lockable="./submitColorText" fieldLabel="Escolha a cor do texto do botão" jcr:primaryType="nt:unstructured" name="./submitColorText" sling:resourceType="granite/ui/components/coral/foundation/form/colorfield" />
-               <submitFirstIconResType jcr:primaryType="nt:unstructured" name="./submitFirstIcon/sling:resourceType" sling:resourceType="granite/ui/components/coral/foundation/form/hidden" value="core/wcm/components/image/v2/image" />
-               <submitFirstIcon allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" cq-msm-lockable="./submitFirstIcon/file" fieldLabel="Escolha o ícone à esquerda do texto do botão " fileNameParameter="./submitFirstIcon/fileName" fileReferenceParameter="./submitFirstIcon/fileReference" jcr:primaryType="nt:unstructured" mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]" multiple="{Boolean}false" name="./submitFirstIcon/file" sling:resourceType="cq/gui/components/authoring/dialog/fileupload" title="Drag to select image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true" />
-               <submitSecondIconResType jcr:primaryType="nt:unstructured" name="./submitSecondIcon/sling:resourceType" sling:resourceType="granite/ui/components/coral/foundation/form/hidden" value="core/wcm/components/image/v2/image" />
-               <submitSecondIcon allowUpload="{Boolean}false" autoStart="{Boolean}false" class="cq-droptarget" cq-msm-lockable="./submitSecondIcon/file" fieldLabel="Escolha o ícone à direita do texto do botão" fileNameParameter="./submitSecondIcon/fileName" fileReferenceParameter="./submitSecondIcon/fileReference" jcr:primaryType="nt:unstructured" mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]" multiple="{Boolean}false" name="./submitSecondIcon/file" sling:resourceType="cq/gui/components/authoring/dialog/fileupload" title="Drag to select image" uploadUrl="${suffix.path}" useHTML5="{Boolean}true" />
-            </items>
-         </column>
-      </items>
-   </content>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Success"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            margin="{Boolean}false"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <textColor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                        cq-msm-lockable="./textColor"
+                        fieldLabel="Escolha a cor do texto"
+                        name="./textColor"/>
+                    <submitBtnTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        cq-msm-lockable="./submitBtnTitle"
+                        fieldLabel="Digite o texto do botão"
+                        name="./submitBtnTitle"/>
+                    <submitBtnColor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                        cq-msm-lockable="./submitBtnColor"
+                        fieldLabel="Escolha a cor do botão"
+                        name="./submitBtnColor"/>
+                    <submitColorText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                        cq-msm-lockable="./submitColorText"
+                        fieldLabel="Escolha a cor do texto do botão"
+                        name="./submitColorText"/>
+                    <submitFirstIconResType
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                        name="./submitFirstIcon/sling:resourceType"
+                        value="core/wcm/components/image/v2/image"/>
+                    <submitFirstIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        allowUpload="{Boolean}false"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        cq-msm-lockable="./submitFirstIcon/file"
+                        fieldLabel="Escolha o ícone à esquerda do texto do botão "
+                        fileNameParameter="./submitFirstIcon/fileName"
+                        fileReferenceParameter="./submitFirstIcon/fileReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./submitFirstIcon/file"
+                        title="Drag to select image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                    <submitSecondIconResType
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                        name="./submitSecondIcon/sling:resourceType"
+                        value="core/wcm/components/image/v2/image"/>
+                    <submitSecondIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        allowUpload="{Boolean}false"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        cq-msm-lockable="./submitSecondIcon/file"
+                        fieldLabel="Escolha o ícone à direita do texto do botão"
+                        fileNameParameter="./submitSecondIcon/fileName"
+                        fileReferenceParameter="./submitSecondIcon/fileReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./submitSecondIcon/file"
+                        title="Drag to select image"
+                        uploadUrl="${suffix.path}"
+                        useHTML5="{Boolean}true"/>
+                </items>
+            </column>
+        </items>
+    </content>
 </jcr:root>
