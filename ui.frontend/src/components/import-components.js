@@ -28,6 +28,7 @@ import "./Certificates/Certificates";
 import "./Certificates/Certificates"
 import "./Basic/Basic"
 import "./Social/Social"
+import "./Success/Success"
 
 import { MapTo } from "@adobe/aem-react-editable-components";
 

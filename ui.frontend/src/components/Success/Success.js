@@ -12,8 +12,8 @@ const Success = ({
   submitBtnTitle,
   submitBtnColor,
   submitColorText,
-  submitFirstIcon,
-  submitSecondIcon,
+  submitFirstIcon={},
+  submitSecondIcon={},
   textColor,
 }) => {
   const [fullName, setFullName] = useState("");
@@ -91,10 +91,10 @@ const Success = ({
         <Text textColor={textColor} TextP={linkedIn} />
         <Text textColor={textColor} TextP={gitHub} />
         <CertificatesContainer>
-          <Text textColor={textColor} textP={"Certificates: "} />
+          <Text textColor={textColor} TextP={"Certificates: "} />
           <Text
             textColor={textColor}
-            textP={certificates.replace(/\,/gs, "\n")}
+            TextP={certificates.replace(/\,/g, "\n")}
           />
         </CertificatesContainer>
         <Text textColor={textColor} TextP={teamName} />
