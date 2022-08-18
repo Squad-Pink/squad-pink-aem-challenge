@@ -46,12 +46,12 @@ export const NavLinkStyled = styled(Link)`
   line-height: ${toRem(36)};
   color: ${(props) => props.titleColor};
   text-decoration: none;    
-  &.active {
-    border-bottom: ${toRem(2)} solid ${(props) => props.borderColor};
-    color: ${(props) => props.titleActiveColor}!important;
-    &:visited, &:link{
-    color: #111111;    
-  }   
+    &.active {
+      border-bottom: ${toRem(2)} solid ${(props) => props.borderColor};
+      color: ${(props) => props.titleActiveColor}!important;
+      &:visited, &:link{
+      color: #111111;    
+    }   
   } 
 `;
 
