@@ -2,19 +2,19 @@ import styled from "styled-components";
 import { toRem } from "../../utils/convertToRem";
 
 const SuccessContainer = styled.div`
-  padding: 2rem;
+  padding: 0 3.5rem;
   width: 100%;
   @media (max-width: 768px) {
-    padding: 0.5rem;
+    padding: 0 1.5rem;
   }
 `;
 
 const ReturnContainer = styled.div`
   width: 100%;
-  height: 3rem;
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
+  margin-top: 7rem;
 `;
 
 const CertificatesContainer = styled.div`
