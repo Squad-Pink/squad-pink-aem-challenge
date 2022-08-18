@@ -1,25 +1,25 @@
-import React,{ useState } from "react";
+import React from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import { TabsContainer, NavTabs, NavLinkStyled, TitleContainer, Container } from "./Tabs.styled";
 import Title from "../Micro/Title/Title";
+import { useLocation } from "react-router-dom";
 
-const Tabs = (props) => {
+const Tabs = (props, {tab1, tab2,tab3}) => {
 
-    const [activeTab, setActiveTab] = useState("tab1");
-
-    const handleTab1 = () => {        
-        setActiveTab("tab1");
-      };
+    const location = useLocation();
     
-      const handleTab2 = () => {      
-        setActiveTab("tab2");
-      };
-
-      const handleTab3 = () => {      
-        setActiveTab("tab3");
-      };
-
-      console.log(activeTab)
+        if(location.pathname === "/content/reactapp/us/en/home") {
+            tab1 = 'active';
+        }
+        if(location.pathname === "/content/reactapp/us/en/home/social") {
+            tab2 = 'active';
+        }
+        if(location.pathname === "/content/reactapp/us/en/home/certificates") {
+            tab3 = 'active';
+        }
+        
+    
+    console.log(tab1, tab2,tab3)
     return (
         <Container>
         <TabsContainer>
@@ -29,8 +29,7 @@ const Tabs = (props) => {
             <NavTabs className="nav">
                 <NavLinkStyled 
                 to={props.url1} 
-                className={activeTab === "tab1" ? "active" : ""} 
-                onClick={handleTab1}
+                className={tab1} 
                 titleColor={props.tabTitleColor} 
                 borderColor={props.titleBorderColor} 
                 titleActiveColor={props.tabTitleActiveColor}>
@@ -38,8 +37,7 @@ const Tabs = (props) => {
                 </NavLinkStyled>
                 <NavLinkStyled 
                 to={props.url2}
-                onClick={handleTab2}
-                className={activeTab === "tab2" ? "active" : ""}  
+                className={tab2} 
                 titleColor={props.tabTitleColor} 
                 borderColor={props.titleBorderColor} 
                 titleActiveColor={props.tabTitleActiveColor}>
@@ -47,14 +45,13 @@ const Tabs = (props) => {
                 </NavLinkStyled>
                 <NavLinkStyled 
                 to={props.url3} 
-                onClick={handleTab3}
-                className={activeTab === "tab3" ? "active" : ""} 
+                className={tab3} 
                 titleColor={props.tabTitleColor} 
                 borderColor={props.titleBorderColor} 
                 titleActiveColor={props.tabTitleActiveColor}>
                     {props.titleTab3}
-                </NavLinkStyled>                
-            </NavTabs>
+                </NavLinkStyled>    
+            </NavTabs>          
         </TabsContainer>
         </Container>
     );
