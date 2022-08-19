@@ -23,6 +23,7 @@ const Success = ({
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [birthday, setBirthday] = useState("");
+  const [age, setAge] = useState("");
   const [linkedIn, setLinkedIn] = useState("");
   const [gitHub, setGitHub] = useState("");
   const [certificates, setCertificates] = useState("");
@@ -38,6 +39,7 @@ const Success = ({
     const email = `Email: ${localStorage.getItem("Email *")}`;
     const phone = `Phone: ${localStorage.getItem("Phone")}`;
     const birthday = `Birthday: ${localStorage.getItem("Birthday *")}`;
+    const age = `Age: ${localStorage.getItem("Age")}`;
     const linkedIn = `LinkedIn: ${localStorage.getItem("LinkedIn")}`;
     const gitHub = `GitHub: ${localStorage.getItem("GitHub *")}`;
     const certificates = `${JSON.parse(localStorage.getItem("certificates"))}`;
@@ -59,6 +61,9 @@ const Success = ({
     }
     if (localStorage.getItem("Birthday *")) {
       setBirthday(birthday);
+    }
+    if (localStorage.getItem("Age")) {
+      setAge(age);
     }
     if (localStorage.getItem("GitHub *")) {
       setGitHub(gitHub);
@@ -98,6 +103,7 @@ const Success = ({
         <Text textColor={textColor} TextP={email} />
         <Text textColor={textColor} TextP={phone} />
         <Text textColor={textColor} TextP={birthday} />
+        <Text textColor={textColor} TextP={age} />
         <Text textColor={textColor} TextP={linkedIn} />
         <Text textColor={textColor} TextP={gitHub} />
         <CertificatesContainer>

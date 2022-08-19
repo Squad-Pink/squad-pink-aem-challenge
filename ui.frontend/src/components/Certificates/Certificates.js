@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import Button from "../Micro/Button/Button";
 import { CertificatesForm, CertificatesInput, DataInputsContainer, SubmitButtonContainer, Container } from "./Certificates.styled";
@@ -27,7 +27,7 @@ const Certificates = ({
     submitSecondIcon ={},
 }) => {
 
-    const { register, handleSubmit, formState:{ errors } } = useForm({resolver: yupResolver(schema)});
+    const { register, handleSubmit, setValue, formState:{ errors } } = useForm({resolver: yupResolver(schema)});
 
     const history = useHistory();
 
@@ -43,7 +43,14 @@ const Certificates = ({
         }
     }
 
-    
+    useEffect(() => {  
+        const teamNameStorage = localStorage.getItem("Team Name *");
+        const institutionStorage = localStorage.getItem("Institution *");
+        const graduationStorage = localStorage.getItem("Graduation *");
+        setValue('Team Name *', teamNameStorage);
+        setValue('Institution *', institutionStorage);
+        setValue('Graduation *', graduationStorage);
+    }, [])
 
     const CERTIFICATESTYPES = {
         type1: "text",

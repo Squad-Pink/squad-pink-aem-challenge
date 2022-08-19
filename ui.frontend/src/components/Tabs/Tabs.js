@@ -2,10 +2,11 @@ import React from "react";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import { TabsContainer, NavTabs, NavLinkStyled, TitleContainer, Container } from "./Tabs.styled";
 import Title from "../Micro/Title/Title";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 
 const Tabs = (props, {tab1, tab2,tab3, tab4}) => {
 
+    const history = useHistory();
     const location = useLocation();
     
         if(location.pathname === "/content/reactapp/us/en/home") {
@@ -21,8 +22,32 @@ const Tabs = (props, {tab1, tab2,tab3, tab4}) => {
             tab4 = 'success';
         }
         
-    
     console.log(tab1, tab2,tab3)
+
+    const ValidatedBasic = localStorage.getItem("Validated Basic");
+    const ValidatedSocial = localStorage.getItem("Validated Social");
+    //const ValidatedCertificates = localStorage.getItem("Validated Certificates");
+    
+    const handleClick1 = () => {
+        if(ValidatedBasic ) {
+            console.log("passei na basic")
+            history.push(props.url1)
+        }
+        
+    }
+    const handleClick2 = () => {
+        if(ValidatedSocial || ValidatedBasic) {
+            console.log("passei na social")
+            history.push(props.url2)
+        }
+    }
+    const handleClick3 = () => {
+        if(ValidatedSocial) {
+            console.log("passei na social")
+            history.push(props.url3)
+        }
+    }
+
     return (
         <Container >
         <TabsContainer className={tab4}>
@@ -31,7 +56,8 @@ const Tabs = (props, {tab1, tab2,tab3, tab4}) => {
             </TitleContainer>
             <NavTabs className="nav">
                 <NavLinkStyled 
-                to={props.url1} 
+               
+                onClick={handleClick1}
                 className={tab1} 
                 titleColor={props.tabTitleColor} 
                 borderColor={props.titleBorderColor} 
@@ -39,7 +65,7 @@ const Tabs = (props, {tab1, tab2,tab3, tab4}) => {
                     {props.titleTab1}
                 </NavLinkStyled>
                 <NavLinkStyled 
-                to={props.url2}
+                onClick={handleClick2}
                 className={tab2} 
                 titleColor={props.tabTitleColor} 
                 borderColor={props.titleBorderColor} 
@@ -47,7 +73,7 @@ const Tabs = (props, {tab1, tab2,tab3, tab4}) => {
                     {props.titleTab2}
                 </NavLinkStyled>
                 <NavLinkStyled 
-                to={props.url3} 
+                onClick={handleClick3} 
                 className={tab3} 
                 titleColor={props.tabTitleColor} 
                 borderColor={props.titleBorderColor} 
