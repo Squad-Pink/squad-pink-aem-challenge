@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { InputBlock } from "../InputBlock/InputBlock";
 import  Birthday  from "../Birthday/Birthday"
 import Button from "../Micro/Button/Button";
 import Checkbox from "../Checkbox/Checkbox"
-import { FormBasic, InputFormGroup, BirthdayDiv, ButtonDiv, Container } from "./Basic.styled";
+import { FormBasic, InputFormGroup, BirthdayDiv, ButtonDiv, CheckboxDiv, Container } from "./Basic.styled";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
@@ -43,16 +43,34 @@ const Basic = ({
         submitSecondIcon = {}, 
     }) => {
 
-    const { register, handleSubmit, formState:{ errors } } =  useForm({
+    const { register, handleSubmit, setValue, formState:{ errors } } =  useForm({
       resolver: yupResolver(schema)
     });
 
     const history = useHistory();
 
+    const validated = true;
+
     const onSubmit = data => {
       saveLocal(data);
+      localStorage.setItem("Validated Basic", validated);
       history.push("/content/reactapp/us/en/home/social");
     }
+
+    useEffect(() => {
+      const fullNameStorage = localStorage.getItem("Full Name *");
+      const nicknameStorage =localStorage.getItem("Nickname");
+      const emailStorage = localStorage.getItem("Email *");
+      const phoneStorage = localStorage.getItem("Phone");
+     
+      const ageStorage = localStorage.getItem("Age");
+      setValue('Full Name *', fullNameStorage);
+      setValue('Nickname', nicknameStorage);
+      setValue('Email *', emailStorage);
+      setValue('Phone', phoneStorage);
+      
+      setValue('Age', ageStorage);
+    }, [])
 
     const saveLocal = (value) => {
       let localValues = Object.entries(value)
@@ -118,6 +136,7 @@ const Basic = ({
         />
 </BirthdayDiv>
 
+<CheckboxDiv>
         <Checkbox
           register={register}
           errors={errors}
@@ -128,7 +147,7 @@ const Basic = ({
           colorError={checkboxColorError}
           borderColor={checkboxBorderColor}
         />
-
+</CheckboxDiv>
       <ButtonDiv>
         <Button
           type='submit'

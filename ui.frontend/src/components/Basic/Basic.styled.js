@@ -51,13 +51,19 @@ export const BirthdayDiv = styled.div`
     grid-column: 1 / 3;
 `;
 
+export const CheckboxDiv = styled.div`
+    display: grid;
+    grid-column: 1 / 3;
+`;
+
 export const ButtonDiv = styled.div`
     display: flex;
     justify-content: end;
-    margin-top: 6rem;
+    margin-top: 3.5rem;
+    grid-column: 2 / 3;
 
     @media (max-width: 768px) {
-        margin-top: 1.5rem;
+        margin-top: 1.2rem;
     }
 `;
 

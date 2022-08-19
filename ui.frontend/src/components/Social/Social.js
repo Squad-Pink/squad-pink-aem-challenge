@@ -33,8 +33,11 @@ const Social = ({
 
   const history = useHistory();
 
+  const validated = true;
+
   const onSubmit = (data) => {
     saveLocal(data);
+    localStorage.setItem("Validated Social", validated);
     history.push("/content/reactapp/us/en/home/certificates");
   }
   
